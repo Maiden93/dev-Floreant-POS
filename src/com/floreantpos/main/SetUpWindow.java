@@ -161,7 +161,7 @@ public class SetUpWindow extends JFrame implements ActionListener {
 		if (StringUtils.isNotEmpty(databaseProviderName)) {
 			databaseCombo.setSelectedItem(Database.getByProviderName(databaseProviderName));
 		}
-		btnTestConnection = new PosButton("Test"); //$NON-NLS-1$
+		btnTestConnection = new PosButton("PROBAR"); //$NON-NLS-1$
 		btnTestConnection.setActionCommand(TEST);
 
 		btnCreateDb = new PosButton("Create New"); //$NON-NLS-1$
