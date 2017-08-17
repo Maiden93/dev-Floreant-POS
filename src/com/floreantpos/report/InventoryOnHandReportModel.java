@@ -8,7 +8,8 @@ import com.floreantpos.model.InventoryItem;
 import com.floreantpos.swing.ListTableModel;
 
 public class InventoryOnHandReportModel extends ListTableModel {
-	SimpleDateFormat dateFormat2 = new SimpleDateFormat("MMM-dd-yyyy hh:mm a"); //$NON-NLS-1$
+	//SimpleDateFormat dateFormat2 = new SimpleDateFormat("MMM-dd-yyyy hh:mm a"); //$NON-NLS-1$
+	SimpleDateFormat dateFormat2 = new SimpleDateFormat("dd-MM-yyyy hh:mm a"); //$NON-NLS-1$
 
 	DecimalFormat decimalFormat = new DecimalFormat("0.00"); //$NON-NLS-1$
 

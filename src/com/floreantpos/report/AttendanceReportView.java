@@ -62,7 +62,8 @@ import com.floreantpos.ui.util.UiUtil;
  * To change this template use File | Settings | File Templates.
  */
 public class AttendanceReportView extends TransparentPanel {
-	SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd,yyy"); //$NON-NLS-1$
+	//SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd,yyy");
+	SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM,yyy"); //$NON-NLS-1$
 	private JButton btnGo;
 	private JXDatePicker fromDatePicker;
 	private JXDatePicker toDatePicker;

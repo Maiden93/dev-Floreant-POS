@@ -104,7 +104,7 @@ public class MultiPrinterPane extends JPanel {
 		});
 		panel.add(btnDelete);
 
-		JButton btnTest = new JButton("TEST"); //$NON-NLS-1$
+		JButton btnTest = new JButton("PROBAR"); //$NON-NLS-1$
 		btnTest.addActionListener(new ActionListener() {
 
 			@Override

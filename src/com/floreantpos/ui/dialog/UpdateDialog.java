@@ -48,7 +48,7 @@ public class UpdateDialog extends POSDialog {
 	private JComboBox cbCheckUpdateStatus;
 
 	public UpdateDialog(String[] versions, boolean up_to_date, boolean showTerminalKey) {
-		super(POSUtil.getBackOfficeWindow(), "Update"); //$NON-NLS-1$
+		super(POSUtil.getBackOfficeWindow(), "Actualizar"); //$NON-NLS-1$
 		setIconImage(Application.getApplicationIcon().getImage());
 		setResizable(false);
 		this.versions = versions;
@@ -64,20 +64,20 @@ public class UpdateDialog extends POSDialog {
 		JLabel logoLabel = new JLabel(IconFactory.getIcon("/icons/", "fp_logo128x128.png")); //$NON-NLS-1$ //$NON-NLS-2$
 		panel.add(logoLabel, "cell 0 0 0 2");
 
-		JLabel l = new JLabel("<html><h1>Floreant POS</h1><h4>Current Version " + Application.VERSION + "</h4></html>"); //$NON-NLS-1$ //$NON-NLS-2$
+		JLabel l = new JLabel("<html><h1>Floreant POS</h1><h4>Versión Actual " + Application.VERSION + "</h4></html>"); //$NON-NLS-1$ //$NON-NLS-2$
 		panel.add(l, "cell 0 2");
 
 		String version = "";
 		if (up_to_date) {
-			version = "<h2>The software is up to date.</h2> ";//$NON-NLS-1$ 
+			version = "<h2>El software esta actualizado.</h2> ";//$NON-NLS-1$ 
 		}
 		else if (versions == null || versions.length == 0) {
-			version = "<h4><a href='#'>Check for updates</a></h4>";//$NON-NLS-1$
+			version = "<h4><a href='#'>Buscar actualizaciones</a></h4>";//$NON-NLS-1$
 		}
 		else if (versions.length > 0) {
-			version = "<h2>Update Available</h2> ";//$NON-NLS-1$ 
+			version = "<h2>Actualización disponible</h2> ";//$NON-NLS-1$ 
 			for (String i : versions) {
-				version += "<h4>" + i + "<a href='#'>  Download</a></h4>";//$NON-NLS-1$ //$NON-NLS-2$
+				version += "<h4>" + i + "<a href='#'>  Descargar</a></h4>";//$NON-NLS-1$ //$NON-NLS-2$
 			}
 		}
 
@@ -116,11 +116,11 @@ public class UpdateDialog extends POSDialog {
 		});
 
 		cbCheckUpdateStatus = new JComboBox();
-		cbCheckUpdateStatus.addItem("Daily");
-		cbCheckUpdateStatus.addItem("Weekly");
-		cbCheckUpdateStatus.addItem("Monthly");
-		cbCheckUpdateStatus.addItem("Never");
-		panel.add(new JLabel("Check for Update"), "split 2,cell 1 2,aligny top,right");
+		cbCheckUpdateStatus.addItem("Diariamente");
+		cbCheckUpdateStatus.addItem("Semanalmente");
+		cbCheckUpdateStatus.addItem("Mensualmente");
+		cbCheckUpdateStatus.addItem("Nunca");
+		panel.add(new JLabel("Buscar actualizaciones"), "split 2,cell 1 2,aligny top,right");
 		panel.add(cbCheckUpdateStatus, "growx,aligny top,right");
 
 		JPanel buttonPanel = new JPanel(new MigLayout("fill"));

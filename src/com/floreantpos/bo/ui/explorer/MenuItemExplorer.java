@@ -156,7 +156,7 @@ public class MenuItemExplorer extends TransparentPanel {
 			panel.add(searchBttn);
 
 			Border loweredetched = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
-			TitledBorder title = BorderFactory.createTitledBorder(loweredetched, "Search"); //$NON-NLS-1$
+			TitledBorder title = BorderFactory.createTitledBorder(loweredetched, "Buscar"); //$NON-NLS-1$
 			title.setTitleJustification(TitledBorder.LEFT);
 			panel.setBorder(title);
 

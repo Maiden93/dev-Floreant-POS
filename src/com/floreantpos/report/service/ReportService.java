@@ -58,8 +58,10 @@ import com.floreantpos.report.ServerProductivityReport;
 import com.floreantpos.report.ServerProductivityReport.ServerProductivityReportData;
 
 public class ReportService {
-	private static SimpleDateFormat fullDateFormatter = new SimpleDateFormat("MMM dd yyyy, hh:mm a"); //$NON-NLS-1$
-	private static SimpleDateFormat shortDateFormatter = new SimpleDateFormat("MMM dd yyyy "); //$NON-NLS-1$
+	//private static SimpleDateFormat fullDateFormatter = new SimpleDateFormat("MMM dd yyyy, hh:mm a"); //$NON-NLS-1$
+	//private static SimpleDateFormat shortDateFormatter = new SimpleDateFormat("MMM dd yyyy "); //$NON-NLS-1$
+	private static SimpleDateFormat fullDateFormatter = new SimpleDateFormat("dd MMM yyyy, hh:mm a"); //$NON-NLS-1$
+	private static SimpleDateFormat shortDateFormatter = new SimpleDateFormat("dd MMM yyyy "); //$NON-NLS-1$
 
 	public static String formatFullDate(Date date) {
 		return fullDateFormatter.format(date);

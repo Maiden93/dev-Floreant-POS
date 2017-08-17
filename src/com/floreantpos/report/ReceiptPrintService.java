@@ -874,7 +874,7 @@ public class ReceiptPrintService {
 		}
 		map.put("orderType", "* " + ticketType + " *"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 
-		map.put("printerName", "Printer Name : " + virtualPrinterName); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		map.put("printerName", "Impresora : " + virtualPrinterName); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 
 		KitchenTicketDataSource dataSource = new KitchenTicketDataSource(ticket);
 

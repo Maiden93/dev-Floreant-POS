@@ -389,7 +389,8 @@ public class OpenTicketsListDialog extends POSDialog {
 
 	class TicketTableCellRenderer extends DefaultTableCellRenderer {
 		Font font = getFont().deriveFont(Font.BOLD, 12);
-		SimpleDateFormat dateFormat = new SimpleDateFormat("MMM-dd-yy hh:mm a"); //$NON-NLS-1$
+		//SimpleDateFormat dateFormat = new SimpleDateFormat("MMM-dd-yy hh:mm a"); //$NON-NLS-1$
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yy hh:mm a"); //$NON-NLS-1$
 		String currencySymbol = CurrencyUtil.getCurrencySymbol();
 
 		@Override

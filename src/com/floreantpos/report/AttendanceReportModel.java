@@ -23,8 +23,9 @@ import java.text.SimpleDateFormat;
 import com.floreantpos.swing.ListTableModel;
 
 public class AttendanceReportModel extends ListTableModel {
-	SimpleDateFormat dateFormat2 = new SimpleDateFormat("MMMdd  HH:mm"); //$NON-NLS-1$
-
+	//SimpleDateFormat dateFormat2 = new SimpleDateFormat("MMMdd  HH:mm"); //$NON-NLS-1$
+	SimpleDateFormat dateFormat2 = new SimpleDateFormat("ddMMM  HH:mm"); //$NON-NLS-1$
+	
 	DecimalFormat decimalFormat = new DecimalFormat("0.00"); //$NON-NLS-1$
 
 	public AttendanceReportModel() {

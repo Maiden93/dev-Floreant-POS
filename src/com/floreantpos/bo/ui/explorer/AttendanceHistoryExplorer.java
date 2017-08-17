@@ -56,7 +56,8 @@ import com.floreantpos.ui.dialog.POSMessageDialog;
 import com.floreantpos.ui.util.UiUtil;
 
 public class AttendanceHistoryExplorer extends TransparentPanel {
-	private SimpleDateFormat dateFormat = new SimpleDateFormat("MMM,dd  hh:mm a"); //$NON-NLS-1$
+	//private SimpleDateFormat dateFormat = new SimpleDateFormat("MMM,dd  hh:mm a"); //$NON-NLS-1$
+	private SimpleDateFormat dateFormat = new SimpleDateFormat("dd,MMM  hh:mm a"); //$NON-NLS-1$
 	private JXDatePicker fromDatePicker = UiUtil.getCurrentMonthStart();
 	private JXDatePicker toDatePicker = UiUtil.getCurrentMonthEnd();
 	private JButton btnGo = new JButton(com.floreantpos.POSConstants.GO);

@@ -71,7 +71,7 @@ public class DateUtil {
 	}
 
 	public static String getReportDate() {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("MMM d h:mm:ss a");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("d/M/yy h:mm:ss a");
 		String date = dateFormat.format(new Date());
 
 		return date;
@@ -89,7 +89,7 @@ public class DateUtil {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm a");
 		String dateString = dateFormat.format(date);
 
-		return "TODAY " + dateString;
+		return "HOY" + dateString;
 	}
 
 	public static boolean isSameDay(Date date1, Date date2) {

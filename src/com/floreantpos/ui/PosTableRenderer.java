@@ -34,7 +34,8 @@ import javax.swing.table.DefaultTableCellRenderer;
 import com.floreantpos.util.NumberUtil;
 
 public class PosTableRenderer extends DefaultTableCellRenderer {
-	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, h:m a"); //$NON-NLS-1$
+	//private static final SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, h:m a"); //$NON-NLS-1$
+	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM, h:m a"); //$NON-NLS-1$
 	/**
 	 * 
 	 */

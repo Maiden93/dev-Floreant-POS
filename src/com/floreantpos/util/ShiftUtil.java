@@ -98,7 +98,8 @@ public class ShiftUtil {
 	}
 	
 	public static String getDateRepresentation(Date date) {
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MMM-dd hh:mm:ss a"); //$NON-NLS-1$
+		//SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MMM-dd hh:mm:ss a"); //$NON-NLS-1$
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss a"); //$NON-NLS-1$
 		return formatter.format(date);
 	}
 	

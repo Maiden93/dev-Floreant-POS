@@ -60,7 +60,8 @@ import com.floreantpos.ui.views.order.RootView;
 import com.floreantpos.util.PosGuiUtil;
 
 public class HeaderPanel extends JPanel {
-	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd yyyy, hh:mm:ss aaa"); //$NON-NLS-1$
+	//private static final SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd yyyy, hh:mm:ss aaa"); //$NON-NLS-1$
+	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yyyy, hh:mm:ss aaa"); //$NON-NLS-1$
 
 	private JLabel statusLabel;
 

@@ -310,8 +310,10 @@ public class SalesSummaryReportView extends javax.swing.JPanel {
 	private javax.swing.JPanel reportPanel;
 	private org.jdesktop.swingx.JXDatePicker toDatePicker;
 	// End of variables declaration//GEN-END:variables
-	private SimpleDateFormat fullDateFormatter = new SimpleDateFormat("yyyy MMM dd, hh:mm a"); //$NON-NLS-1$
-	private SimpleDateFormat shortDateFormatter = new SimpleDateFormat("yyyy MMM dd"); //$NON-NLS-1$
+	//private SimpleDateFormat fullDateFormatter = new SimpleDateFormat("yyyy MMM dd, hh:mm a"); //$NON-NLS-1$
+	//private SimpleDateFormat shortDateFormatter = new SimpleDateFormat("yyyy MMM dd"); //$NON-NLS-1$
+	private SimpleDateFormat fullDateFormatter = new SimpleDateFormat("dd MMM yyyy, hh:mm a"); //$NON-NLS-1$
+	private SimpleDateFormat shortDateFormatter = new SimpleDateFormat("dd MMM yyyy"); //$NON-NLS-1$
 	
 	private Date fromDate;
 	private Date toDate;
