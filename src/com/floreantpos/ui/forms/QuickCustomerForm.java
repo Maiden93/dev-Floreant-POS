@@ -83,7 +83,7 @@ public class QuickCustomerForm extends BeanEditor<Customer> {
 		setOpaque(true);
 		JPanel inputPanel = new JPanel();
 		inputPanel.setLayout(new MigLayout("insets 10 10 10 10", "[][][][]", "[][][][][]")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-		inputPanel.setBorder(BorderFactory.createTitledBorder("Enter Customer Information"));
+		inputPanel.setBorder(BorderFactory.createTitledBorder(Messages.getString("CustomerForm.64")));
 
 		JLabel lblAddress = new JLabel(Messages.getString("CustomerForm.18")); //$NON-NLS-1$
 		tfAddress = new JTextArea(new FixedLengthDocument(220));

@@ -35,6 +35,7 @@ import net.miginfocom.swing.MigLayout;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import com.floreantpos.Messages;
 import com.floreantpos.bo.ui.BOMessageDialog;
 import com.floreantpos.model.Currency;
 import com.floreantpos.model.dao.CurrencyDAO;
@@ -71,22 +72,22 @@ public class CurrencyForm extends BeanEditor {
 	private void initComponents() {
 		JPanel contentPanel = new JPanel(new MigLayout("fill"));
 
-		JLabel lblCode = new JLabel("Code:");
+		JLabel lblCode = new JLabel(com.floreantpos.POSConstants.CODE + ":");
 		tfCode = new FixedLengthTextField();
 
 		JLabel lblName = new JLabel(com.floreantpos.POSConstants.NAME + ":");
 		tfName = new FixedLengthTextField();
 
-		JLabel lblExchangeRate = new JLabel("Exchange Rate:");
+		JLabel lblExchangeRate = new JLabel(com.floreantpos.POSConstants.RATE + ":");
 		tfExchangeRate = new DoubleTextField();
 
-		JLabel lblTolerance = new JLabel("Tolerance:");
+		JLabel lblTolerance = new JLabel(com.floreantpos.POSConstants.TOLERANCE + ":");
 		tfTolerance = new DoubleTextField();
 
-		JLabel lblSymbol = new JLabel("Symbol");
+		JLabel lblSymbol = new JLabel(com.floreantpos.POSConstants.SYMBOL + ":");
 		tfSymbol = new JTextField();
 
-		chkMain = new JCheckBox("Main");
+		chkMain = new JCheckBox(com.floreantpos.POSConstants.MAIN);
 
 		contentPanel.add(lblName, "cell 0 0");
 		contentPanel.add(tfName, "cell 1 0");
@@ -142,14 +143,14 @@ public class CurrencyForm extends BeanEditor {
 		String code = tfCode.getText();
 		String name = tfName.getText();
 		if (POSUtil.isBlankOrNull(code)) {
-			MessageDialog.showError("Code is required");
+			MessageDialog.showError(Messages.getString("CurrencyDialog.5"));
 			return false;
 		}
 		
 		double exchangeRate = tfExchangeRate.getDouble();
 		if(chkMain.isSelected()) {
 			if(exchangeRate != 1.0) {
-				POSMessageDialog.showMessage(POSUtil.getFocusedWindow(), "Exchange rate must be 1.0 for main currency");
+				POSMessageDialog.showMessage(POSUtil.getFocusedWindow(), Messages.getString("CurrencyDialog.6"));
 				return false;
 			}
 		}
@@ -189,8 +190,8 @@ public class CurrencyForm extends BeanEditor {
 	public String getDisplayText() {
 		Currency currency = (Currency) getBean();
 		if (currency.getId() == null) {
-			return "New Currency";
+			return Messages.getString("CurrencyDialog.7");
 		}
-		return "Edit Currency";
+		return Messages.getString("CurrencyDialog.8");
 	}
 }

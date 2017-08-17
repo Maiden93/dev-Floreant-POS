@@ -125,9 +125,9 @@ public class MultiPrinterPane extends JPanel {
 		}
 
 		tableModel = new BeanTableModel<Printer>(Printer.class);
-		tableModel.addColumn("Name", "virtualPrinter"); //$NON-NLS-1$ //$NON-NLS-2$
-		tableModel.addColumn("Printer", "deviceName"); //$NON-NLS-1$ //$NON-NLS-2$
-		tableModel.addColumn("Type", "type"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(POSConstants.NAME, "virtualPrinter"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(POSConstants.PRINTER, "deviceName"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(POSConstants.TYPE, "type"); //$NON-NLS-1$ //$NON-NLS-2$
 
 		List<VirtualPrinter> virtualPrinters = VirtualPrinterDAO.getInstance().findAll();
 
@@ -223,7 +223,7 @@ public class MultiPrinterPane extends JPanel {
 
 	protected void doAddPrinter() {
 		AddPrinterDialog dialog = new AddPrinterDialog();
-		dialog.titlePanel.setTitle(VirtualPrinter.PRINTER_TYPE_NAMES[selectedPrinterType] + " - Printer"); //$NON-NLS-1$
+		dialog.titlePanel.setTitle(VirtualPrinter.PRINTER_TYPE_NAMES[selectedPrinterType] + " - " + POSConstants.PRINTER); //$NON-NLS-1$
 		dialog.open();
 
 		if (dialog.isCanceled()) {
@@ -303,17 +303,17 @@ public class MultiPrinterPane extends JPanel {
 		Printer printer = tableModel.getRow(index);
 
 		if (printer.getDeviceName() == null) {
-			PosLog.info(getClass(), "No print selected for " + printer.getType());
+			PosLog.info(getClass(), Messages.getString("AddPrinterDialog.10")+" " + printer.getType());
 			return;
 		}
 
 		try {
-			String title = "System Information"; //$NON-NLS-1$
+			String title = Messages.getString("PosMessage.318"); //$NON-NLS-1$
 			String data = printer.getDeviceName() + "-" + printer.getVirtualPrinter().getName(); //$NON-NLS-1$
 			data += "\n Terminal : " + Application.getInstance().getTerminal().getName(); //$NON-NLS-1$
-			data += "\n Current User : " + Application.getCurrentUser().getFirstName(); //$NON-NLS-1$
-			data += "\n Floreant Version : " + Application.VERSION; //$NON-NLS-1$
-			data += "\n Database Name : " + AppConfig.getDatabaseName() + AppConfig.getDatabaseHost() + AppConfig.getDatabasePort(); //$NON-NLS-1$
+			data += "\n "+Messages.getString("PosMessage.319")+" : " + Application.getCurrentUser().getFirstName(); //$NON-NLS-1$
+			data += "\n "+Messages.getString("PosMessage.320")+": " + Application.VERSION; //$NON-NLS-1$
+			data += "\n "+Messages.getString("DbPanel.12")+": " + AppConfig.getDatabaseName() + AppConfig.getDatabaseHost() + AppConfig.getDatabasePort(); //$NON-NLS-1$
 			ReceiptPrintService.testPrinter(printer.getDeviceName(), title, data);
 
 		} catch (Exception e) {

@@ -34,7 +34,7 @@ import com.floreantpos.util.POSUtil;
 import com.floreantpos.util.SerialPortUtil;
 
 public class PeripheralConfigurationView extends ConfigurationView {
-	public static final String CONFIG_TAB_PERIPHERAL = "Peripherals"; //$NON-NLS-1$
+	public static final String CONFIG_TAB_PERIPHERAL = Messages.getString("PeripheralConfigurationView.2"); //$NON-NLS-1$
 	private JCheckBox chkHasCashDrawer;
 	private JTextField tfDrawerName = new JTextField(10);
 	private JTextField tfDrawerCodes = new JTextField(15);

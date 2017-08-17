@@ -37,6 +37,8 @@ public class POSConstants {
 	public static final String RETAIL_BUTTON_TEXT = Messages.getString("RETAIL_BUTTON_TEXT"); //$NON-NLS-1$
 	
 	public static final String SEARCH_ITEM_BUTTON_TEXT = Messages.getString("SEARCH_ITEM_BUTTON_TEXT"); //$NON-NLS-1$
+	public static final String INCLUDE_FREE_ITEM_CHECK_BOX_TEXT = Messages.getString("PosMessage.316"); //$NON-NLS-1$
+	//public static final String USER_TYPE = Messages.getString("PosMessage.316"); //$NON-NLS-1$
 
 	public static final String CashierSwitchBoardView_LABEL_ORDER = Messages.getString("CashierSwitchBoardView.LABEL_ORDER"); //$NON-NLS-1$
 
@@ -150,6 +152,7 @@ public class POSConstants {
 	public static final String GENERAL = Messages.getString("PosMessage.62"); //$NON-NLS-1$
 	public static final String GROUP = Messages.getString("PosMessage.63"); //$NON-NLS-1$
 	public static final String GRUPO = Messages.getString("GRUPO"); //$NON-NLS-1$
+	public static final String PRINTER = Messages.getString("PosMessage.317"); //$NON-NLS-1$
 	
 	public static final String UNGROUP = Messages.getString("UNGROUP.01"); //$NON-NLS-1$
 	public static final String RATE = Messages.getString("PosMessage.64"); //$NON-NLS-1$
@@ -275,6 +278,10 @@ public class POSConstants {
 	public static final String DATE_TIME = Messages.getString("PosMessage.177"); //$NON-NLS-1$
 	public static final String TAX = Messages.getString("PosMessage.178"); //$NON-NLS-1$
 	public static final String NAME = Messages.getString("PosMessage.179"); //$NON-NLS-1$
+	public static final String CODE = Messages.getString("PosMessage.312"); //$NON-NLS-1$
+	public static final String SYMBOL = Messages.getString("PosMessage.313"); //$NON-NLS-1$
+	public static final String MAIN = Messages.getString("PosMessage.314"); //$NON-NLS-1$
+	public static final String TOLERANCE = Messages.getString("PosMessage.315"); //$NON-NLS-1$
 	public static final String IMAGE = Messages.getString("IMAGE_ICON"); //$NON-NLS-1$
 	public static final String TRANSLATED_NAME = Messages.getString("Translated_Name"); //$NON-NLS-1$
 	public static final String SORT_ORDER = Messages.getString("SORT_ORDER"); //$NON-NLS-1$

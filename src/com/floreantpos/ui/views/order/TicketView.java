@@ -158,7 +158,7 @@ public class TicketView extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 
 				if (txtSearchItem.getText().equals("")) {
-					POSMessageDialog.showMessage("Please enter item number or barcode ");
+					POSMessageDialog.showMessage(Messages.getString("TicketView.46"));
 					return;
 				}
 
@@ -173,7 +173,7 @@ public class TicketView extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				ItemSearchDialog dialog = new ItemSearchDialog(Application.getPosWindow());
-				dialog.setTitle("Search item");
+				dialog.setTitle(Messages.getString("TicketView.47"));
 				dialog.pack();
 				dialog.open();
 				if (dialog.isCanceled()) {
@@ -184,7 +184,7 @@ public class TicketView extends JPanel {
 
 				if (!addMenuItemByBarcode(dialog.getValue())) {
 					if (!addMenuItemByItemId(dialog.getValue())) {
-						POSMessageDialog.showError(Application.getPosWindow(), "Item not found");
+						POSMessageDialog.showError(Application.getPosWindow(), Messages.getString("TicketView.48"));
 					}
 				}
 			}
@@ -267,7 +267,7 @@ public class TicketView extends JPanel {
 
 	private boolean filterByStockAmount(MenuItem menuItem) {
 		if (menuItem.isDisableWhenStockAmountIsZero() && menuItem.getStockAmount() <= 0) {
-			POSMessageDialog.showError("Items are not available in stock");
+			POSMessageDialog.showError(Messages.getString("TicketView.49"));
 			return false;
 		}
 		return true;
@@ -468,7 +468,7 @@ public class TicketView extends JPanel {
 			TicketItem ticketItem = (TicketItem) object;
 
 			SeatSelectionDialog seatDialog = new SeatSelectionDialog(ticket.getTableNumbers(), getSeatNumbers());
-			seatDialog.setTitle("Select Seat");
+			seatDialog.setTitle(Messages.getString("TicketView.50"));
 			seatDialog.pack();
 			seatDialog.open();
 
@@ -478,7 +478,7 @@ public class TicketView extends JPanel {
 			int seatNumber = seatDialog.getSeatNumber();
 			if (seatNumber == -1) {
 				NumberSelectionDialog2 dialog = new NumberSelectionDialog2();
-				dialog.setTitle("Enter seat number");
+				dialog.setTitle(Messages.getString("TicketView.51"));
 				dialog.setValue(ticketItem.getSeatNumber());
 				dialog.pack();
 				dialog.open();
@@ -489,7 +489,7 @@ public class TicketView extends JPanel {
 				seatNumber = (int) dialog.getValue();
 			}
 
-			ticketItem.setName("Seat** " + seatNumber);
+			ticketItem.setName(Messages.getString("TicketView.52")+" " + seatNumber);
 			ticketItem.setSeatNumber(seatNumber);
 			updateTicketItemsSeatNumber(ticketItem);
 		}
@@ -529,7 +529,7 @@ public class TicketView extends JPanel {
 
 	private void doIncreaseAmount() {// GEN-FIRST:event_doIncreaseAmount
 		if (!checkStock(-1)) {
-			POSMessageDialog.showError("Items are not available in stock");
+			POSMessageDialog.showError(Messages.getString("TicketView.49"));
 			return;
 		}
 
@@ -548,7 +548,7 @@ public class TicketView extends JPanel {
 		}
 
 		if (!checkStock(selectedQuantity)) {
-			POSMessageDialog.showError("Items are not available in stock");
+			POSMessageDialog.showError(Messages.getString("TicketView.49"));
 			return;
 		}
 
@@ -602,7 +602,7 @@ public class TicketView extends JPanel {
 	public void updateView() {
 		if (ticket == null) {
 			btnTotal.setText(POSConstants.TOTAL.toUpperCase() + " " + CurrencyUtil.getCurrencySymbol() + "0.00");
-			titledBorder.setTitle(ticket.getTicketType().toString() + "[New Ticket]"); //$NON-NLS-1$
+			titledBorder.setTitle(ticket.getTicketType().toString() + Messages.getString("TicketView.53")); //$NON-NLS-1$
 			return;
 		}
 		ticket.calculatePrice();
@@ -628,11 +628,11 @@ public class TicketView extends JPanel {
 		}*/
 
 		if (ticket.getId() == null) {
-			titledBorder.setTitle(ticket.getTicketType() + " [New Ticket]"); //$NON-NLS-1$
+			titledBorder.setTitle(ticket.getTicketType() +" "+ Messages.getString("TicketView.53")); //$NON-NLS-1$
 		}
 		else {
 			titledBorder.setTitle(ticket.getTicketType()
-					+ " " + Messages.getString("TicketView.37") + ticket.getId() + " Table# " + getTableNumbers(ticket.getTableNumbers())); //$NON-NLS-1$ //$NON-NLS-2$
+					+ " " + Messages.getString("TicketView.37") + ticket.getId() + Messages.getString("TicketView.54") + getTableNumbers(ticket.getTableNumbers())); //$NON-NLS-1$ //$NON-NLS-2$
 
 			/*	titledBorder.setTitle(ticket.getTicketType()
 						+ " Ticket ["+ ticket.getId()+"]," + "Table [" + getTableNumbers(ticket.getTableNumbers())+"]"); //$NON-NLS-1$ //$NON-NLS-2$	
@@ -809,14 +809,14 @@ public class TicketView extends JPanel {
 			selectedQuantity = AutomatedWeightInputDialog.takeDoubleInput(selectedTicketItem.getNameDisplay(), 1);
 		}
 		else {
-			selectedQuantity = BasicWeightInputDialog.takeDoubleInput("Please enter item weight or quantity.", 1);
+			selectedQuantity = BasicWeightInputDialog.takeDoubleInput(Messages.getString("TicketView.55"), 1);
 		}
 		if (selectedQuantity <= -1) {
 			return -1;
 		}
 
 		if (selectedQuantity == 0) {
-			POSMessageDialog.showError("Unit can not be zero");
+			POSMessageDialog.showError(Messages.getString("TicketView.56"));
 			return -1;
 		}
 		return selectedQuantity;

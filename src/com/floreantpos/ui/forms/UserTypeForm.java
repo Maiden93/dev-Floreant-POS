@@ -32,6 +32,7 @@ import javax.swing.JPanel;
 
 import org.apache.commons.lang.StringUtils;
 
+import com.floreantpos.Messages;
 import com.floreantpos.model.UserPermission;
 import com.floreantpos.model.UserType;
 import com.floreantpos.model.dao.UserTypeDAO;
@@ -139,9 +140,9 @@ public class UserTypeForm extends BeanEditor {
 	@Override
 	public String getDisplayText() {
 		if (userType == null)
-			return "New user type"; //$NON-NLS-1$
+			return Messages.getString("UserType.0"); //$NON-NLS-1$
 
-		return "Edit user type"; //$NON-NLS-1$
+		return Messages.getString("UserType.1"); //$NON-NLS-1$
 	}
 
 	@Override

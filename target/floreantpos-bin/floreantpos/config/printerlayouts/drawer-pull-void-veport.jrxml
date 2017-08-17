@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DrawerPullVoidReport" pageWidth="225" pageHeight="60" columnWidth="225" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="f1b762c0-e066-441d-a519-cb102d5ed1e1">
-	<property name="ireport.zoom" value="4.594972986357222"/>
-	<property name="ireport.x" value="138"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DrawerPullVoidReport" pageWidth="225" pageHeight="60" columnWidth="225" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<style name="Crosstab Data Text" hAlign="Center"/>
-	<subDataset name="Table Dataset 1" uuid="88d6857c-11e7-469a-a2a1-f6ec5097e6c2"/>
+	<subDataset name="Table Dataset 1"/>
 	<parameter name="totalVoid" class="java.lang.Double" isForPrompting="false"/>
 	<queryString>
 		<![CDATA[]]>
@@ -27,7 +27,7 @@
 	<title>
 		<band height="27" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="15" width="224" height="12" uuid="91415dff-cad5-48c6-b503-0d425cd0e5a4"/>
+				<reportElement x="0" y="15" width="224" height="12"/>
 				<box leftPadding="2" rightPadding="2"/>
 				<textElement textAlignment="Center">
 					<font size="9" isBold="true"/>
@@ -35,7 +35,7 @@
 				<text><![CDATA[VOID/REFUNDS (WITHOUT TAX)]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="67" y="0" width="100" height="15" uuid="9f5a6f1c-b866-4ab4-b12a-e5889d01e1c3"/>
+				<reportElement x="67" y="0" width="100" height="15"/>
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
@@ -49,7 +49,7 @@
 	<columnHeader>
 		<band height="13" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="0" width="39" height="12" uuid="00a1b832-5ef9-4bf8-ab67-e0b791dc7167"/>
+				<reportElement x="0" y="0" width="39" height="12"/>
 				<box leftPadding="2" rightPadding="2"/>
 				<textElement>
 					<font size="9"/>
@@ -57,7 +57,7 @@
 				<text><![CDATA[CODE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="39" y="0" width="78" height="12" uuid="df0a8f5c-2ab8-4fd2-93ac-19a820d50284"/>
+				<reportElement x="39" y="0" width="78" height="12"/>
 				<box leftPadding="2" rightPadding="2"/>
 				<textElement>
 					<font size="9"/>
@@ -65,7 +65,7 @@
 				<text><![CDATA[REASON]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="117" y="0" width="36" height="12" uuid="8c976045-866a-413b-9722-13441dbad71f"/>
+				<reportElement x="117" y="0" width="36" height="12"/>
 				<box leftPadding="2" rightPadding="2"/>
 				<textElement>
 					<font size="9"/>
@@ -73,7 +73,7 @@
 				<text><![CDATA[WASTE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="156" y="0" width="68" height="12" uuid="1e87d0d4-2f8b-4325-a29a-e23e16bfc6fc"/>
+				<reportElement x="156" y="0" width="68" height="12"/>
 				<box leftPadding="2" rightPadding="2"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
@@ -81,7 +81,7 @@
 				<text><![CDATA[AMOUNT]]></text>
 			</staticText>
 			<line>
-				<reportElement x="0" y="12" width="224" height="1" uuid="6852a4ec-b631-43e3-abc4-e3cd4115a88d"/>
+				<reportElement x="0" y="12" width="224" height="1"/>
 				<graphicElement>
 					<pen lineWidth="0.75"/>
 				</graphicElement>
@@ -91,36 +91,36 @@
 	<detail>
 		<band height="12" splitType="Stretch">
 			<textField isBlankWhenNull="true">
-				<reportElement x="156" y="0" width="68" height="12" uuid="f2b7a774-78fb-4de3-bdd1-29d9380342ea"/>
+				<reportElement x="156" y="0" width="68" height="12"/>
 				<box leftPadding="2" rightPadding="2"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{amount}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="0" y="0" width="39" height="12" uuid="50f5788c-b5c3-4020-9de1-69f65592b8e7"/>
+				<reportElement x="0" y="0" width="39" height="12"/>
 				<box leftPadding="2" rightPadding="2"/>
 				<textElement>
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{code}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="39" y="0" width="78" height="12" uuid="a2aaf81b-99bb-484a-ba76-ec9fced89a50"/>
+				<reportElement x="39" y="0" width="78" height="12"/>
 				<box leftPadding="2" rightPadding="2"/>
 				<textElement>
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{reason}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{reason}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="117" y="0" width="36" height="12" uuid="d18894bb-0c11-400e-8bca-60a7d12753b0"/>
+				<reportElement x="117" y="0" width="36" height="12"/>
 				<box leftPadding="2" rightPadding="2"/>
 				<textElement>
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{hast}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hast}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
@@ -133,7 +133,7 @@
 	<summary>
 		<band height="12" splitType="Stretch">
 			<staticText>
-				<reportElement x="114" y="0" width="39" height="12" uuid="8eefa241-e6e5-4e6e-a0b5-c7541ee01e7f"/>
+				<reportElement x="114" y="0" width="39" height="12"/>
 				<box leftPadding="2" rightPadding="2"/>
 				<textElement>
 					<font size="9"/>
@@ -141,15 +141,15 @@
 				<text><![CDATA[TOTAL]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement x="156" y="0" width="68" height="12" uuid="9848af94-e1d0-4af3-a631-d5d884d4f6d1"/>
+				<reportElement x="156" y="0" width="68" height="12"/>
 				<box leftPadding="2" rightPadding="2"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{totalVoid}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$P{totalVoid}]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement x="0" y="0" width="226" height="1" uuid="65470160-fbee-48d5-ba6a-a0b2d021543e"/>
+				<reportElement x="0" y="0" width="226" height="1"/>
 				<graphicElement>
 					<pen lineWidth="0.75"/>
 				</graphicElement>

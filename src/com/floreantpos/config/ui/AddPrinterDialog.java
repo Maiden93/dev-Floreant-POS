@@ -82,10 +82,10 @@ public class AddPrinterDialog extends POSDialog {
 		centerPanel.setLayout(new MigLayout("", "[][grow][]", "[][][][][grow]")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		
 		titlePanel = new TitlePanel();
-		titlePanel.setTitle("Printer Type:");//$NON-NLS-1$
+		titlePanel.setTitle(Messages.getString("AddPrinterDialog.13"));//$NON-NLS-1$
 		add(titlePanel, BorderLayout.NORTH);
 		
-		JLabel lblName = new JLabel("Virtual Printer Name : "); //$NON-NLS-1$
+		JLabel lblName = new JLabel(Messages.getString("AddPrinterDialog.14")+" : "); //$NON-NLS-1$
 		centerPanel.add(lblName, "cell 0 0,alignx trailing"); //$NON-NLS-1$
 		
 		tfName = new FixedLengthTextField(20);

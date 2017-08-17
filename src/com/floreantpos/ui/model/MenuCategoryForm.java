@@ -116,7 +116,7 @@ public class MenuCategoryForm extends BeanEditor {
 		add(tfName, "cell 1 0,growx,aligny top"); //$NON-NLS-1$
 		add(tfSortOrder, "cell 1 2,alignx left,aligny top"); //$NON-NLS-1$
 
-		lblTextColor = new JLabel("Text color"); //$NON-NLS-1$
+		lblTextColor = new JLabel(Messages.getString("MenuItemForm.lblTextColor.text")); //$NON-NLS-1$
 		add(lblTextColor, "cell 0 4"); //$NON-NLS-1$
 
 		btnTextColor = new JButton();

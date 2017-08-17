@@ -48,11 +48,16 @@ public class CurrencyExplorer extends TransparentPanel {
 
 		tableModel.addColumn(POSConstants.ID.toUpperCase(), "id"); //$NON-NLS-1$
 		tableModel.addColumn(POSConstants.NAME.toUpperCase(), "name"); //$NON-NLS-1$
-		tableModel.addColumn("CODE", "code"); //$NON-NLS-1$
-		tableModel.addColumn("SYMBOL", "symbol"); //$NON-NLS-1$
-		tableModel.addColumn("RATE", "exchangeRate"); //$NON-NLS-1$
-		tableModel.addColumn("MAIN", "main"); //$NON-NLS-1$
-		tableModel.addColumn("TOLERANCE", "tolerance"); //$NON-NLS-1$
+		tableModel.addColumn(POSConstants.CODE.toUpperCase(), "code"); //$NON-NLS-1$
+		tableModel.addColumn(POSConstants.SYMBOL.toUpperCase(), "symbol"); //$NON-NLS-1$
+		tableModel.addColumn(POSConstants.RATE.toUpperCase(), "exchangeRate"); //$NON-NLS-1$
+		tableModel.addColumn(POSConstants.MAIN.toUpperCase(), "main"); //$NON-NLS-1$
+		tableModel.addColumn(POSConstants.TOLERANCE.toUpperCase(), "tolerance"); //$NON-NLS-1$
+		//tableModel.addColumn("CODE", "code"); //$NON-NLS-1$
+		//tableModel.addColumn("SYMBOL", "symbol"); //$NON-NLS-1$
+		//tableModel.addColumn("RATE", "exchangeRate"); //$NON-NLS-1$
+		//tableModel.addColumn("MAIN", "main"); //$NON-NLS-1$
+		//tableModel.addColumn("TOLERANCE", "tolerance"); //$NON-NLS-1$
 
 		tableModel.addRows(CurrencyDAO.getInstance().findAll());
 		table = new JXTable(tableModel);

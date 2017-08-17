@@ -34,6 +34,7 @@ import javax.swing.JSeparator;
 
 import net.miginfocom.swing.MigLayout;
 
+import com.floreantpos.Messages;
 import com.floreantpos.POSConstants;
 import com.floreantpos.PosException;
 import com.floreantpos.model.VirtualPrinter;
@@ -67,11 +68,11 @@ public class PrinterTypeSelectionDialog extends POSDialog implements ActionListe
 	}
 
 	private void initializeComponent() {
-		setTitle("Select Printer Type"); //$NON-NLS-1$
+		setTitle(Messages.getString("AddPrinterDialog.11")); //$NON-NLS-1$
 		setLayout(new BorderLayout());
 
 		TitlePanel titlePanel = new TitlePanel();
-		titlePanel.setTitle("Select Printer Type");//$NON-NLS-1$
+		titlePanel.setTitle(Messages.getString("AddPrinterDialog.11"));//$NON-NLS-1$
 		add(titlePanel, BorderLayout.NORTH);
 
 		JPanel buttonActionPanel = new JPanel(new MigLayout("fill")); //$NON-NLS-1$

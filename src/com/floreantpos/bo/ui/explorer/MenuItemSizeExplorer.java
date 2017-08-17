@@ -10,6 +10,7 @@ import javax.swing.JScrollPane;
 
 import org.jdesktop.swingx.JXTable;
 
+import com.floreantpos.Messages;
 import com.floreantpos.POSConstants;
 import com.floreantpos.bo.ui.BOMessageDialog;
 import com.floreantpos.model.MenuItemSize;
@@ -33,11 +34,11 @@ public class MenuItemSizeExplorer extends TransparentPanel {
 		tableModel = new BeanTableModel<MenuItemSize>(MenuItemSize.class);
 		tableModel.addColumn(POSConstants.ID.toUpperCase(), "id"); //$NON-NLS-1$
 		tableModel.addColumn(POSConstants.NAME.toUpperCase(), "name"); //$NON-NLS-1$
-		tableModel.addColumn("TRANSLATED NAME", "translatedName"); //$NON-NLS-1$
-		tableModel.addColumn("DESCRIPTION", "description"); //$NON-NLS-1$
-		tableModel.addColumn("SIZE (in Inch)", "sizeInInch"); //$NON-NLS-1$
-		tableModel.addColumn("SORT", "sortOrder"); //$NON-NLS-1$
-		tableModel.addColumn("DEFAULT", "defaultSize"); //$NON-NLS-1$
+		tableModel.addColumn(Messages.getString("MenuItemForm.lblTranslatedName.text").toUpperCase(), "translatedName"); //$NON-NLS-1$
+		tableModel.addColumn(Messages.getString("MenuItemForm.29").toUpperCase(), "description"); //$NON-NLS-1$
+		tableModel.addColumn(Messages.getString("MenuItemForm.30").toUpperCase(), "sizeInInch"); //$NON-NLS-1$
+		tableModel.addColumn(Messages.getString("MenuItemForm.lblSortOrder.text").toUpperCase(), "sortOrder"); //$NON-NLS-1$
+		tableModel.addColumn(Messages.getString("MenuItemForm.7").toUpperCase(), "defaultSize"); //$NON-NLS-1$
 
 		menuItemSizeList = MenuItemSizeDAO.getInstance().findAll();
 		tableModel.addRows(menuItemSizeList);

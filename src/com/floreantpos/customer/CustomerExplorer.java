@@ -26,6 +26,8 @@ import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
+import com.floreantpos.Messages;
+import com.floreantpos.POSConstants;
 import com.floreantpos.bo.ui.BOMessageDialog;
 import com.floreantpos.model.Customer;
 import com.floreantpos.model.dao.CustomerDAO;
@@ -51,20 +53,20 @@ public class CustomerExplorer extends TransparentPanel {
 
 		tableModel = new BeanTableModel<Customer>(Customer.class);
 		tableModel.addColumn("ID", "autoId"); //$NON-NLS-1$ //$NON-NLS-2$
-		tableModel.addColumn("NAME", "name"); //$NON-NLS-1$ //$NON-NLS-2$
-		tableModel.addColumn("LOYALTY", "loyaltyNo"); //$NON-NLS-1$ //$NON-NLS-2$
-		tableModel.addColumn("TELEPHONE", "telephoneNo"); //$NON-NLS-1$ //$NON-NLS-2$
-		tableModel.addColumn("EMAIL", "email"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(Messages.getString("CustomerForm.3").toUpperCase(), "name"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(Messages.getString("CustomerForm.31").toUpperCase(), "loyaltyNo"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(Messages.getString("CustomerForm.12").toUpperCase(), "telephoneNo"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(Messages.getString("CustomerForm.15").toUpperCase(), "email"); //$NON-NLS-1$ //$NON-NLS-2$
 		tableModel.addColumn("DOB", "dob"); //$NON-NLS-1$ //$NON-NLS-2$
 		tableModel.addColumn("SSN", "ssn"); //$NON-NLS-1$ //$NON-NLS-2$
-		tableModel.addColumn("ADDRESS", "address"); //$NON-NLS-1$ //$NON-NLS-2$
-		tableModel.addColumn("CITY", "city"); //$NON-NLS-1$ //$NON-NLS-2$
-		tableModel.addColumn("STATE", "state"); //$NON-NLS-1$ //$NON-NLS-2$
-		tableModel.addColumn("ZIP", "zipCode"); //$NON-NLS-1$ //$NON-NLS-2$
-		tableModel.addColumn("COUNTRY", "country"); //$NON-NLS-1$ //$NON-NLS-2$
-		tableModel.addColumn("CREDIT LIMIT", "creditLimit"); //$NON-NLS-1$ //$NON-NLS-2$
-		tableModel.addColumn("CREDIT SPENT", "creditSpent"); //$NON-NLS-1$ //$NON-NLS-2$
-		tableModel.addColumn("NOTE", "note"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(Messages.getString("CustomerForm.18").toUpperCase(), "address"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(Messages.getString("CustomerForm.24").toUpperCase(), "city"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(Messages.getString("CustomerForm.25").toUpperCase(), "state"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(Messages.getString("CustomerForm.21").toUpperCase(), "zipCode"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(Messages.getString("CustomerForm.27").toUpperCase(), "country"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(Messages.getString("CustomerForm.37").toUpperCase(), "creditLimit"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(Messages.getString("CustomerForm.38").toUpperCase(), "creditSpent"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(Messages.getString("PosMessage.137").toUpperCase(), "note"); //$NON-NLS-1$ //$NON-NLS-2$
 		tableModel.addRows(customerList);
 
 		table = new JTable(tableModel);

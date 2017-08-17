@@ -183,9 +183,9 @@ public class PizzaItemForm extends BeanEditor<MenuItem> implements ActionListene
 				}
 			}
 		};
-		priceTableModel.addColumn("SIZE", "size");
-		priceTableModel.addColumn("CRUST", "crust");
-		priceTableModel.addColumn("PRICE", "price");
+		priceTableModel.addColumn(Messages.getString("PizzaItem.0").toUpperCase(), "size");
+		priceTableModel.addColumn(Messages.getString("PizzaItem.1").toUpperCase(), "crust");
+		priceTableModel.addColumn(Messages.getString("PizzaItem.2").toUpperCase(), "price");
 
 		List<PizzaPrice> pizzaPriceList = menuItem.getPizzaPriceList();
 

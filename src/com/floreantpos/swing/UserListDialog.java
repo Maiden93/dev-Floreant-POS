@@ -27,6 +27,7 @@ import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 
 import com.floreantpos.Messages;
+import com.floreantpos.POSConstants;
 import com.floreantpos.main.Application;
 import com.floreantpos.model.User;
 import com.floreantpos.model.dao.UserDAO;
@@ -48,7 +49,7 @@ public class UserListDialog extends OkCancelOptionDialog {
 		contentPane.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
 		tableModel = new BeanTableModel<User>(User.class);
-		tableModel.addColumn("Name", "fullName"); //$NON-NLS-1$ //$NON-NLS-2$
+		tableModel.addColumn(POSConstants.NAME, "fullName"); //$NON-NLS-1$ //$NON-NLS-2$
 
 		userListTable = new JTable(tableModel);
 		userListTable.setRowHeight(PosUIManager.getSize(60));

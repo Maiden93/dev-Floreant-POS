@@ -210,8 +210,8 @@ public class MenuItemExplorer extends TransparentPanel {
 		JButton duplicateButton = new JButton(POSConstants.DUPLICATE);
 		JButton updateStockAmount = new JButton(Messages.getString("MenuItemExplorer.6")); //$NON-NLS-1$
 
-		JButton btnChangeMenuGroup = new JButton("Change Menu Group");
-		JButton btnChangeOrderType = new JButton("Change Order Type");
+		JButton btnChangeMenuGroup = new JButton(Messages.getString("MenuItemExplorer.17"));
+		JButton btnChangeOrderType = new JButton(Messages.getString("MenuItemExplorer.18"));
 
 		updateStockAmount.addActionListener(new ActionListener() {
 

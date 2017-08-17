@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DrawerPullJReport" pageWidth="226" pageHeight="550" columnWidth="224" leftMargin="1" rightMargin="1" topMargin="1" bottomMargin="1" isIgnorePagination="true" uuid="241f7609-0514-4ae0-b242-6acebf8e559f">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DrawerPullJReport" pageWidth="226" pageHeight="550" columnWidth="224" leftMargin="1" rightMargin="1" topMargin="1" bottomMargin="1" isIgnorePagination="true">
 	<property name="ireport.scriptlethandling" value="0"/>
 	<property name="ireport.encoding" value="UTF-8"/>
 	<property name="ireport.zoom" value="1.6105100000000008"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="334"/>
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
@@ -169,7 +169,7 @@
 	<title>
 		<band height="78" splitType="Stretch">
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField-12" x="0" y="0" width="223" height="18" isRemoveLineWhenBlank="true" uuid="93c4a831-41f7-49d8-817f-23fd0dc9ec1c"/>
+				<reportElement key="textField-12" x="0" y="0" width="223" height="18" isRemoveLineWhenBlank="true"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -179,10 +179,10 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="11" isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{headerLine1}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{headerLine1}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField-12" x="0" y="19" width="223" height="18" isRemoveLineWhenBlank="true" uuid="21f63994-a5cd-4e07-8d86-aa5913283f4d"/>
+				<reportElement key="textField-12" x="0" y="19" width="223" height="18" isRemoveLineWhenBlank="true"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -192,10 +192,10 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{terminal}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{terminal}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField-12" x="0" y="55" width="223" height="18" isRemoveLineWhenBlank="true" uuid="a5c90665-f290-4f5b-a241-b002c2a500b8"/>
+				<reportElement key="textField-12" x="0" y="55" width="223" height="18" isRemoveLineWhenBlank="true"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -205,10 +205,10 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+				<textFieldExpression class="java.util.Date"><![CDATA[$P{date}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement key="textField-12" x="0" y="37" width="223" height="18" isRemoveLineWhenBlank="true" uuid="f78594c1-0726-45a7-879b-ae6acbc85c3b"/>
+				<reportElement key="textField-12" x="0" y="37" width="223" height="18" isRemoveLineWhenBlank="true"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -218,7 +218,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{user}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{user}]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>
@@ -231,7 +231,7 @@
 	<detail>
 		<band height="520" splitType="Stretch">
 			<staticText>
-				<reportElement key="staticText-1" x="0" y="7" width="224" height="15" uuid="e1ffd679-8c30-4d78-95ff-7d0036d4b48a"/>
+				<reportElement key="staticText-1" x="0" y="7" width="224" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -241,10 +241,10 @@
 				<textElement textAlignment="Center">
 					<font isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<text><![CDATA[BALANCE DE VENTAS]]></text>
+				<text><![CDATA[SALES BALANCE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-2" x="0" y="27" width="120" height="15" uuid="61046263-a6a0-443b-b9ef-1db547debe2b"/>
+				<reportElement key="staticText-2" x="0" y="27" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -254,10 +254,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[VENTAS NETAS]]></text>
+				<text><![CDATA[   NET SALES]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-3" x="0" y="72" width="120" height="15" uuid="f385c4f8-0585-4965-9496-a9c9461d360d"/>
+				<reportElement key="staticText-3" x="0" y="72" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -267,10 +267,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[TIPS CARGADAS]]></text>
+				<text><![CDATA[+CHARGED TIPS]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-4" x="0" y="57" width="120" height="15" uuid="2caaf029-0e04-441c-b759-b2b032d581a9"/>
+				<reportElement key="staticText-4" x="0" y="57" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -280,10 +280,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[INGRESOS TOTALES]]></text>
+				<text><![CDATA[=TOTAL REVENUES]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-5" x="0" y="42" width="120" height="15" uuid="72e0e936-ca10-4060-aa1d-143c7b3149e4"/>
+				<reportElement key="staticText-5" x="0" y="42" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -293,16 +293,16 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[IMP. DE VENTA]]></text>
+				<text><![CDATA[+SALS TAX]]></text>
 			</staticText>
 			<line>
-				<reportElement key="line-1" x="0" y="88" width="224" height="1" uuid="298c1b6e-357f-4fcb-922a-73f8863947f4"/>
+				<reportElement key="line-1" x="0" y="88" width="224" height="1"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineStyle="Solid"/>
 				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement key="staticText-6" x="-1" y="90" width="120" height="15" uuid="f434f934-0f31-4a66-a7a9-f6b25886ca0a"/>
+				<reportElement key="staticText-6" x="-1" y="90" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -312,10 +312,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[RECIBOS BRUTOS]]></text>
+				<text><![CDATA[=GROSS RECEIPTS]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-7" x="0" y="112" width="120" height="15" uuid="99d3f6d8-2466-4d9f-bf69-3e89812a5771"/>
+				<reportElement key="staticText-7" x="0" y="112" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -325,10 +325,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[RECIBOS DE EFECTIVO]]></text>
+				<text><![CDATA[-CASH RECEIPTS]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-9" x="0" y="142" width="120" height="15" uuid="b8b6a053-332f-4569-a99e-a3a1867df77b"/>
+				<reportElement key="staticText-9" x="0" y="142" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -338,10 +338,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[TARJETAS DE DÉBITO]]></text>
+				<text><![CDATA[-DEBIT CARDS]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-10" x="0" y="127" width="120" height="15" uuid="607be825-2c03-4680-9a74-5e9bc8970628"/>
+				<reportElement key="staticText-10" x="0" y="127" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -351,10 +351,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[TARJETAS DE CRÉDITO]]></text>
+				<text><![CDATA[-CREDIT CARDS]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-8" x="0" y="157" width="120" height="15" uuid="457c3ae6-eb91-4f5d-b893-e7326fab9013"/>
+				<reportElement key="staticText-8" x="0" y="157" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -364,10 +364,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[REGRESO DE REGALOS]]></text>
+				<text><![CDATA[-GIFT RETURNS]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-12" x="0" y="172" width="120" height="15" uuid="35f2849f-aeaa-4f2d-bab8-77c8b85b2e2d"/>
+				<reportElement key="staticText-12" x="0" y="172" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -377,10 +377,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[CERT. DE REGALO]]></text>
+				<text><![CDATA[+GIFT CERT. CHANGE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-14" x="0" y="202" width="120" height="15" uuid="bc6998ea-b8a3-4351-b7ff-65b0088a2657"/>
+				<reportElement key="staticText-14" x="0" y="202" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -390,16 +390,16 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[CASH BACK]]></text>
+				<text><![CDATA[+CASH BACK]]></text>
 			</staticText>
 			<line>
-				<reportElement key="line-3" x="0" y="217" width="224" height="1" uuid="8031b5d5-5731-4771-b9b3-be9c06fc2961"/>
+				<reportElement key="line-3" x="0" y="217" width="224" height="1"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineStyle="Solid"/>
 				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement key="staticText-15" x="-1" y="219" width="120" height="15" uuid="0c8e3d21-6e88-495f-ab7d-a3865b8195a7"/>
+				<reportElement key="staticText-15" x="-1" y="219" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -409,10 +409,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[DIFERENCIAL DE RECIBO]]></text>
+				<text><![CDATA[=RECEIPT DIFFERENTIAL]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-16" x="0" y="241" width="120" height="15" uuid="ccec73a2-c724-4108-b930-dcfa431bf11f"/>
+				<reportElement key="staticText-16" x="0" y="241" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -422,10 +422,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[TIPS CARGADAS]]></text>
+				<text><![CDATA[+CHARGED TIPS]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-17" x="0" y="256" width="120" height="15" uuid="23e6f862-b322-45dd-b1ac-bc8f2a71bf50"/>
+				<reportElement key="staticText-17" x="0" y="256" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -435,16 +435,16 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[TIPS PAGADOS]]></text>
+				<text><![CDATA[-TIPS PAID]]></text>
 			</staticText>
 			<line>
-				<reportElement key="line-4" x="0" y="271" width="224" height="1" uuid="80559791-ba6f-43c8-b282-ee3f53c8d388"/>
+				<reportElement key="line-4" x="0" y="271" width="224" height="1"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineStyle="Solid"/>
 				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement key="staticText-18" x="-1" y="273" width="120" height="15" uuid="e73fd34f-0f22-46ee-8afb-1df3bedee1ed"/>
+				<reportElement key="staticText-18" x="-1" y="273" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -454,10 +454,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[DIFERENCIAL DE TIPS]]></text>
+				<text><![CDATA[=TIPS DIFFERENTIAL]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-20" x="0" y="318" width="120" height="15" uuid="87f70605-030c-4fcf-ae9d-a4a00b393ede"/>
+				<reportElement key="staticText-20" x="0" y="318" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -467,10 +467,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[EFECTIVO]]></text>
+				<text><![CDATA[   CASH]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-21" x="0" y="380" width="120" height="15" uuid="3d3eadc9-83b7-429d-8988-6f79f301cd9f"/>
+				<reportElement key="staticText-21" x="0" y="380" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -480,10 +480,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[CASH BACK]]></text>
+				<text><![CDATA[-CASH BACK]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-22" x="0" y="348" width="120" height="15" uuid="dec25410-d493-4381-8b87-2bf1b993c918"/>
+				<reportElement key="staticText-22" x="0" y="348" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -493,10 +493,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[PAGAR]]></text>
+				<text><![CDATA[-PAY OUT]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-23" x="0" y="333" width="120" height="15" uuid="cf9b40a8-f8f1-47d3-9d4d-81b45dec5a35"/>
+				<reportElement key="staticText-23" x="0" y="333" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -506,16 +506,16 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[TIPS PAGADOS]]></text>
+				<text><![CDATA[-TIPS PAID]]></text>
 			</staticText>
 			<line>
-				<reportElement key="line-5" x="0" y="425" width="224" height="1" uuid="0a443b37-f332-48cf-8c45-4d50bde967b1"/>
+				<reportElement key="line-5" x="0" y="425" width="224" height="1"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineStyle="Solid"/>
 				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement key="staticText-24" x="-1" y="395" width="120" height="15" uuid="1bf4a691-57f3-486a-9d5d-9fab9e85e5b6"/>
+				<reportElement key="staticText-24" x="-1" y="395" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -525,10 +525,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[DINERO INICIAL]]></text>
+				<text><![CDATA[+BEGIN CASH]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-25" x="0" y="427" width="120" height="15" uuid="9b95d56f-7ffd-4050-a05d-47494d9ac70d"/>
+				<reportElement key="staticText-25" x="0" y="427" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -538,10 +538,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[CUADRO DE CAJAS]]></text>
+				<text><![CDATA[=DRAWER ACCOUNTABLE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-26" x="0" y="410" width="120" height="15" uuid="31052797-9dd2-4669-8ad9-69bd65577662"/>
+				<reportElement key="staticText-26" x="0" y="410" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -551,10 +551,10 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[DRAWER BLEED]]></text>
+				<text><![CDATA[-DRAWER BLEED]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText-27" x="0" y="442" width="120" height="15" uuid="8f56a3f8-ca23-4f52-97c6-645ded4ffbaf"/>
+				<reportElement key="staticText-27" x="0" y="442" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -564,123 +564,123 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[> EFECTIVO PARA DEPOSITAR]]></text>
+				<text><![CDATA[>CASH TO DEPOSIT]]></text>
 			</staticText>
 			<subreport>
-				<reportElement x="0" y="494" width="222" height="21" uuid="636bbfec-5298-47b0-a32a-9fdbc1897d36"/>
+				<reportElement x="0" y="494" width="222" height="21"/>
 				<subreportParameter name="totalVoid">
 					<subreportParameterExpression><![CDATA[$P{totalVoid}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{voidTickets})]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{subreportParameter}]]></subreportExpression>
+				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{subreportParameter}]]></subreportExpression>
 			</subreport>
 			<textField>
-				<reportElement x="123" y="27" width="100" height="15" uuid="fd06207a-b4d2-4821-8213-e4029ecdc855"/>
+				<reportElement x="123" y="27" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{netSales})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{netSales})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="42" width="100" height="15" uuid="0c907a93-d1a0-41a3-93af-d07143580e9f"/>
+				<reportElement x="123" y="42" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{salesTax})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{salesTax})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="57" width="100" height="15" uuid="8e917017-0cf5-42b0-9f86-13c63e6d0507"/>
+				<reportElement x="123" y="57" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{totalRevenue})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{totalRevenue})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="72" width="100" height="15" uuid="6ef4c3e7-f2fe-4f90-804f-62c6e7ce55d1"/>
+				<reportElement x="123" y="72" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{chargedTips})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{chargedTips})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="90" width="100" height="15" uuid="54d19b5b-3d33-4f97-9b1d-c196b93cb121"/>
+				<reportElement x="123" y="90" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{grossReceipts})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{grossReceipts})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="112" width="100" height="15" uuid="52048ccd-0826-44f6-97a3-2c3471b71d4a"/>
+				<reportElement x="123" y="112" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{cashReceiptAmount})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{cashReceiptAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="127" width="100" height="15" uuid="748772ca-24e6-4542-905f-1f2644d0da57"/>
+				<reportElement x="123" y="127" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{creditCardReceiptAmount})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{creditCardReceiptAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="142" width="100" height="15" uuid="944af90a-cfda-41d1-9f59-c475666fc73d"/>
+				<reportElement x="123" y="142" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{debitCardReceiptAmount})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{debitCardReceiptAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="172" width="100" height="15" uuid="4a5ffb46-978a-444f-af43-665b59f0bb92"/>
+				<reportElement x="123" y="172" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{giftCertChangeAmount})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{giftCertChangeAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="157" width="100" height="15" uuid="2f18eafa-0b81-4c48-bc6f-9a48b928aae5"/>
+				<reportElement x="123" y="157" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{giftCertReturnAmount})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{giftCertReturnAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="202" width="100" height="15" uuid="0aac861e-ed1b-4f9c-8036-5fbdb3c87a85"/>
+				<reportElement x="123" y="202" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{cashBack})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{cashBack})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="219" width="100" height="15" uuid="906342f7-78f3-4832-97b4-8dd5ecf3093a"/>
+				<reportElement x="123" y="219" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{receiptDifferential})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{receiptDifferential})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="241" width="100" height="15" uuid="29d56a6c-1acb-4789-82cc-e81ef376bb46"/>
+				<reportElement x="123" y="241" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{chargedTips})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{chargedTips})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="256" width="100" height="15" uuid="42e6262a-b15b-4749-bef3-aeb7f3587203"/>
+				<reportElement x="123" y="256" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{tipsPaid})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{tipsPaid})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="273" width="100" height="15" uuid="b13bb670-141f-4cca-a490-6d3dd19e5312"/>
+				<reportElement x="123" y="273" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{tipsDifferential})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{tipsDifferential})]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement key="staticText-1" x="-1" y="296" width="224" height="15" uuid="433f804a-f47d-4775-94c6-62e1ba561286"/>
+				<reportElement key="staticText-1" x="-1" y="296" width="224" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -690,78 +690,78 @@
 				<textElement textAlignment="Center">
 					<font isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<text><![CDATA[SALDO EN EFECTIVO]]></text>
+				<text><![CDATA[CASH BALANCE]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="123" y="318" width="100" height="15" uuid="e2e4ee9c-61eb-4697-83c0-3fc9734f1e09"/>
+				<reportElement x="123" y="318" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{cashReceiptAmount})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{cashReceiptAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="333" width="100" height="15" uuid="0e055d73-1384-424d-a44c-4bd602308c0e"/>
+				<reportElement x="123" y="333" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{tipsPaid})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{tipsPaid})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="348" width="100" height="15" uuid="aafc386f-0147-4232-a892-dbed5d75b215"/>
+				<reportElement x="123" y="348" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{payOutAmount})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{payOutAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="380" width="100" height="15" uuid="1adeb765-1a88-4da3-9edf-186ba35ea862"/>
+				<reportElement x="123" y="380" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{cashBack})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{cashBack})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="395" width="100" height="15" uuid="d9c7092b-6d57-4f41-83ee-5fce73219012"/>
+				<reportElement x="123" y="395" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{beginCash})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{beginCash})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="410" width="100" height="15" uuid="dd179cd6-67e9-4575-a9bb-bbec2ae138e6"/>
+				<reportElement x="123" y="410" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{drawerBleedAmount})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{drawerBleedAmount})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="427" width="100" height="15" uuid="2ea170ac-c7a6-43b6-9cc9-05d5418e6314"/>
+				<reportElement x="123" y="427" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{drawerAccountable})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{drawerAccountable})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="123" y="442" width="100" height="15" uuid="f6fe241e-df9c-4604-ba29-879f112f6ac6"/>
+				<reportElement x="123" y="442" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{cashToDeposit})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{cashToDeposit})]]></textFieldExpression>
 			</textField>
 			<subreport>
-				<reportElement x="-1" y="464" width="222" height="26" uuid="a4592416-ef6e-48c3-b2f4-b6f219b1da5f"/>
+				<reportElement x="-1" y="464" width="222" height="26"/>
 				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{currencyBalances})]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{currencyBalanceReport}]]></subreportExpression>
+				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{currencyBalanceReport}]]></subreportExpression>
 			</subreport>
 			<textField>
-				<reportElement x="123" y="187" width="100" height="15" uuid="64eca8f0-f9ba-47bb-8792-9d8fa1af0330"/>
+				<reportElement x="123" y="187" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{refundAmount})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{refundAmount})]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement key="staticText-14" x="0" y="187" width="120" height="15" uuid="bf1c3270-77b3-4e2a-91de-3c50e7d8c24b"/>
+				<reportElement key="staticText-14" x="0" y="187" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -771,17 +771,17 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[REEMBOLSO]]></text>
+				<text><![CDATA[+REFUND]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="123" y="364" width="100" height="15" uuid="279c8878-d158-4ab1-9f19-9652bb49316c"/>
+				<reportElement x="123" y="364" width="100" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("0.00").format($F{refundAmount})]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[new java.text.DecimalFormat("0.00").format($F{refundAmount})]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement key="staticText-21" x="0" y="364" width="120" height="15" uuid="dd677772-e2cf-467c-a746-4dddd2750eb8"/>
+				<reportElement key="staticText-21" x="0" y="364" width="120" height="15"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -791,7 +791,7 @@
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
-				<text><![CDATA[REEMBOLSO]]></text>
+				<text><![CDATA[-REFUND]]></text>
 			</staticText>
 		</band>
 	</detail>

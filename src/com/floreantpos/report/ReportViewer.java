@@ -122,9 +122,9 @@ public class ReportViewer extends JPanel {
 		lblToDate = new JLabel(com.floreantpos.POSConstants.END_DATE + ":");
 		dpEndDate = UiUtil.getCurrentMonthEnd();
 
-		chkBoxFree = new JCheckBox("Include Free Items");
+		chkBoxFree = new JCheckBox(com.floreantpos.POSConstants.INCLUDE_FREE_ITEM_CHECK_BOX_TEXT);
 
-		lblUserType = new JLabel("User Type");
+		lblUserType = new JLabel(com.floreantpos.POSConstants.USER_TYPE);
 		cbUserType = new JComboBox();
 
 		btnRefresh = new JButton();

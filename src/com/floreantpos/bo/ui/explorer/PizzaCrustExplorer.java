@@ -27,6 +27,7 @@ import javax.swing.JScrollPane;
 
 import org.jdesktop.swingx.JXTable;
 
+import com.floreantpos.Messages;
 import com.floreantpos.POSConstants;
 import com.floreantpos.bo.ui.BOMessageDialog;
 import com.floreantpos.model.PizzaCrust;
@@ -50,10 +51,10 @@ public class PizzaCrustExplorer extends TransparentPanel {
 		tableModel = new BeanTableModel<PizzaCrust>(PizzaCrust.class);
 		tableModel.addColumn(POSConstants.ID.toUpperCase(), "id"); //$NON-NLS-1$
 		tableModel.addColumn(POSConstants.NAME.toUpperCase(), "name"); //$NON-NLS-1$
-		tableModel.addColumn("TRANSLATED NAME", "translatedName"); //$NON-NLS-1$
-		tableModel.addColumn("DESCRIPTION", "description"); //$NON-NLS-1$
-		tableModel.addColumn("SORT", "sortOrder"); //$NON-NLS-1$
-		tableModel.addColumn("DEFAULT", "defaultCrust"); //$NON-NLS-1$
+		tableModel.addColumn(Messages.getString("Translated_Name").toUpperCase(), "translatedName"); //$NON-NLS-1$
+		tableModel.addColumn(Messages.getString("PosMessage.181").toUpperCase(), "description"); //$NON-NLS-1$
+		tableModel.addColumn(Messages.getString("SORT_ORDER").toUpperCase(), "sortOrder"); //$NON-NLS-1$
+		tableModel.addColumn(Messages.getString("DEFAULT").toUpperCase(), "defaultCrust"); //$NON-NLS-1$
 
 		pizzaCrustList = PizzaCrustDAO.getInstance().findAll();
 		tableModel.addRows(pizzaCrustList);
@@ -130,7 +131,7 @@ public class PizzaCrustExplorer extends TransparentPanel {
 
 		});
 
-		JButton defaultButton = new JButton("Set Default");
+		JButton defaultButton = new JButton(Messages.getString("DEFAULT_SET"));
 		defaultButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {

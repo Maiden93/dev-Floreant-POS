@@ -211,7 +211,7 @@ public class ModifierPriceByOrderTypeDialog extends POSDialog {
 	private void createView() {
 		contentPane = new JPanel(new BorderLayout());
 		final JLabel label1 = new JLabel();
-		label1.setText("Order type:"); //$NON-NLS-1$
+		label1.setText(Messages.getString("MenuItemExplorer.4")); //$NON-NLS-1$
 		cbOrderTypes = new JComboBox();
 
 		JLabel label3 = new JLabel();

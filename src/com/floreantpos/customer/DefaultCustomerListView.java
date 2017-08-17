@@ -364,7 +364,7 @@ public class DefaultCustomerListView extends CustomerSelector {
 			if (endNumber > totalNumber) {
 				endNumber = totalNumber;
 			}
-			lblNumberOfItem.setText(String.format("Showing %s to %s of %s", startNumber, endNumber, totalNumber));
+			lblNumberOfItem.setText(String.format(Messages.getString("CustomerForm.65"), startNumber, endNumber, totalNumber));
 
 			customerListTableModel.fireTableDataChanged();
 			customerTable.repaint();
