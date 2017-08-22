@@ -28,7 +28,7 @@ import com.floreantpos.swing.IntegerTextField;
 import com.floreantpos.swing.POSTextField;
 
 public class TicketImportConfigurationView extends ConfigurationView {
-	public static final String CONFIG_TAB_TAX = "Ticket Import"; //$NON-NLS-1$
+	public static final String CONFIG_TAB_TAX = Messages.getString("TicketImportConfigurationView.0"); //$NON-NLS-1$
 	
 	private POSTextField tfURL = new POSTextField(30);
 	private POSTextField tfSecretKey = new POSTextField(10);

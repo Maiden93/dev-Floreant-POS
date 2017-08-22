@@ -107,7 +107,7 @@ public class NewBarTabAction extends AbstractAction implements CardInputListener
 			}
 		}
 		else {
-			String customerTabName = PosOptionPane.showInputDialog("Enter bar tab name");
+			String customerTabName = PosOptionPane.showInputDialog(Messages.getString("NewBarTabAction.10"));
 			ticket.addProperty(Ticket.CUSTOMER_NAME, customerTabName);
 		}
 		Application application = Application.getInstance();

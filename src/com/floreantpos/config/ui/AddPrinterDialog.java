@@ -51,7 +51,7 @@ import com.floreantpos.ui.dialog.POSMessageDialog;
 import com.floreantpos.util.POSUtil;
 
 public class AddPrinterDialog extends POSDialog {
-	private static final String DO_NOT_PRINT = "Do not print";
+	private static final String DO_NOT_PRINT = Messages.getString("AddPrinterDialog.1");
 	
 	private Printer printer;
 	
@@ -223,7 +223,7 @@ public class AddPrinterDialog extends POSDialog {
 			cbVirtualPrinter.setSelectedItem(printer.getVirtualPrinter());
 			chckbxDefault.setSelected(printer.isDefaultPrinter());
 			
-			if (printer.getDeviceName() == "No Print") {
+			if (printer.getDeviceName() == Messages.getString("AddPrinterDialog.2")) {
 				cbDevice.setSelectedItem(DO_NOT_PRINT);
 				return;
 			}

@@ -108,7 +108,7 @@ public class PizzaModifierExplorer extends TransparentPanel {
 		JButton addButton = explorerButtonPanel.getAddButton();
 		JButton deleteButton = explorerButtonPanel.getDeleteButton();
 		JButton duplicateButton = new JButton(POSConstants.DUPLICATE);
-		JButton btnChangeModifierGroup = new JButton("Change Group");
+		JButton btnChangeModifierGroup = new JButton(Messages.getString("PizzaModifierExplorerAction.2"));
 		addButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -401,7 +401,7 @@ public class PizzaModifierExplorer extends TransparentPanel {
 
 	protected MenuModifierGroup getSelectedModifierGroup(MenuModifierGroup defaultValue) {
 		List<MenuModifierGroup> modifierGroups = MenuModifierGroupDAO.getInstance().findAll();
-		ComboItemSelectionDialog dialog = new ComboItemSelectionDialog("SELECT MODIFIER GROUP", "Modifier Group", modifierGroups, false);
+		ComboItemSelectionDialog dialog = new ComboItemSelectionDialog(Messages.getString("PizzaModifierExplorerAction.3"), Messages.getString("PizzaModifierExplorerAction.4"), modifierGroups, false);
 		dialog.setSelectedItem(defaultValue);
 		dialog.setVisibleNewButton(false);
 		dialog.pack();

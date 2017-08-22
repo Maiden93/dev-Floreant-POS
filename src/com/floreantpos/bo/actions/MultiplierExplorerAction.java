@@ -29,7 +29,7 @@ import com.floreantpos.bo.ui.explorer.MultiplierExplorer;
 public class MultiplierExplorerAction extends AbstractAction {
 
 	public MultiplierExplorerAction() {
-		super("Multiplicadores");
+		super(com.floreantpos.POSConstants.MENU_MULTIPLIERS);
 	}
 
 	public MultiplierExplorerAction(String name) {
@@ -45,10 +45,10 @@ public class MultiplierExplorerAction extends AbstractAction {
 		
 		MultiplierExplorer explorer = null;
 		JTabbedPane tabbedPane = backOfficeWindow.getTabbedPane();
-		int index = tabbedPane.indexOfTab("Multiplicadores");
+		int index = tabbedPane.indexOfTab(com.floreantpos.POSConstants.MENU_MULTIPLIERS);
 		if (index == -1) {
 			explorer = new MultiplierExplorer();
-			tabbedPane.addTab("Multiplicadores", explorer);
+			tabbedPane.addTab(com.floreantpos.POSConstants.MENU_MULTIPLIERS, explorer);
 		}
 		else {
 			explorer = (MultiplierExplorer) tabbedPane.getComponentAt(index);

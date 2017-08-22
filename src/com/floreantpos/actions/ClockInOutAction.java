@@ -219,7 +219,7 @@ public class ClockInOutAction extends PosAction {
 			user.setAvailableForDelivery(false);
 			user.setLastClockOutTime(currentTime.getTime());
 
-			LogFactory.getLog(Application.class).info("terminal id befor saving clockIn=" + terminal.getId()); //$NON-NLS-1$
+			LogFactory.getLog(Application.class).info(Messages.getString("ClockInOutAction.9")+"=" + terminal.getId()); //$NON-NLS-1$
 
 			EmployeeInOutHistory attendenceHistory = new EmployeeInOutHistory();
 			attendenceHistory.setOutTime(currentTime.getTime());
@@ -231,7 +231,7 @@ public class ClockInOutAction extends PosAction {
 
 			UserDAO.getInstance().saveDriverOut(user, attendenceHistory, currentShift, currentTime);
 
-			POSMessageDialog.showMessage("Driver " + user.getFirstName() + " " + user.getLastName() + " is out for delivery."); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+			POSMessageDialog.showMessage(Messages.getString("ClockInOutAction.18")+" " + user.getFirstName() + " " + user.getLastName() + " "+Messages.getString("ClockInOutAction.17")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		} catch (Exception e) {
 			POSMessageDialog.showError(Application.getPosWindow(), e.getMessage(), e);
 		}
@@ -272,7 +272,7 @@ public class ClockInOutAction extends PosAction {
 
 			UserDAO.getInstance().saveDriverIn(user, attendenceHistory, shift, calendar);
 
-			POSMessageDialog.showMessage("Driver " + user.getFirstName() + " " + user.getLastName() + " is in after delivery"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+			POSMessageDialog.showMessage(Messages.getString("ClockInOutAction.18")+" " + user.getFirstName() + " " + user.getLastName() + Messages.getString("ClockInOutAction.19")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		} catch (Exception e) {
 			POSMessageDialog.showError(Application.getPosWindow(), e.getMessage(), e);
 		}

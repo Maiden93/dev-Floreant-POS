@@ -31,6 +31,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.AbstractTableModel;
 
+import com.floreantpos.Messages;
 import com.floreantpos.POSConstants;
 import com.floreantpos.bo.ui.BOMessageDialog;
 import com.floreantpos.bo.ui.CustomCellRenderer;
@@ -139,7 +140,7 @@ public class MultiplierExplorer extends TransparentPanel {
 			}
 		});
 
-		JButton btnSetAsDefault = new JButton("Set default");
+		JButton btnSetAsDefault = new JButton(Messages.getString("DEFAULT_SET"));
 		btnSetAsDefault.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -171,8 +172,8 @@ public class MultiplierExplorer extends TransparentPanel {
 	}
 
 	class MultiplierExplorerTableModel extends AbstractTableModel {
-		String[] columnNames = { POSConstants.NAME, "Prefix", POSConstants.RATE, POSConstants.SORT_ORDER, POSConstants.BUTTON_COLOR, POSConstants.TEXT_COLOR,
-				"Default" };
+		String[] columnNames = { POSConstants.NAME, POSConstants.PREFIX, POSConstants.RATE, POSConstants.SORT_ORDER, POSConstants.BUTTON_COLOR, POSConstants.TEXT_COLOR,
+				POSConstants.DEFAULT };
 
 		public int getRowCount() {
 			if (multiplierList == null) {

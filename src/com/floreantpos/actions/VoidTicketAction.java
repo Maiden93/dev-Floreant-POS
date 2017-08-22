@@ -55,7 +55,7 @@ public class VoidTicketAction extends PosAction {
 				ticket = TicketService.getTicket(ticketId);
 			}
 			if (ticket.isVoided()) {
-				if (POSMessageDialog.showYesNoQuestionDialog(POSUtil.getFocusedWindow(), "Este ticket ya está anulado.  \n¿Desea volver a anularlo?", "Confirmar") != JOptionPane.YES_OPTION) {
+				if (POSMessageDialog.showYesNoQuestionDialog(POSUtil.getFocusedWindow(), Messages.getString("VoidTicketAction.1"), Messages.getString("PosMessage.297")) != JOptionPane.YES_OPTION) {
 					return;
 				}
 			}

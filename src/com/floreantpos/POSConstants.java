@@ -38,6 +38,9 @@ public class POSConstants {
 	
 	public static final String SEARCH_ITEM_BUTTON_TEXT = Messages.getString("SEARCH_ITEM_BUTTON_TEXT"); //$NON-NLS-1$
 	public static final String INCLUDE_FREE_ITEM_CHECK_BOX_TEXT = Messages.getString("PosMessage.316"); //$NON-NLS-1$
+	public static final String PIZZA = Messages.getString("PizzaItem.0"); //$NON-NLS-1$
+	public static final String TEST = Messages.getString("PosMessage.322"); //$NON-NLS-1$
+	public static final String TEST2 = Messages.getString("PosMessage.323"); //$NON-NLS-1$
 	//public static final String USER_TYPE = Messages.getString("PosMessage.316"); //$NON-NLS-1$
 
 	public static final String CashierSwitchBoardView_LABEL_ORDER = Messages.getString("CashierSwitchBoardView.LABEL_ORDER"); //$NON-NLS-1$
@@ -168,6 +171,7 @@ public class POSConstants {
 	public static final String ENTER_YOUR_USER_ID = Messages.getString("PosMessage.73"); //$NON-NLS-1$
 	public static final String DEBIT_CARD_TRANSACTION = Messages.getString("PosMessage.74"); //$NON-NLS-1$
 	public static final String MENU_MODIFIERS = Messages.getString("PosMessage.75"); //$NON-NLS-1$
+	public static final String MENU_MULTIPLIERS = Messages.getString("Multiplier.0"); //$NON-NLS-1$
 	public static final String CLOSED = Messages.getString("PosMessage.76"); //$NON-NLS-1$
 	public static final String SHUTDOWN = Messages.getString("PosMessage.77"); //$NON-NLS-1$
 	public static final String LOGIN = Messages.getString("PosMessage.78"); //$NON-NLS-1$
@@ -278,6 +282,8 @@ public class POSConstants {
 	public static final String DATE_TIME = Messages.getString("PosMessage.177"); //$NON-NLS-1$
 	public static final String TAX = Messages.getString("PosMessage.178"); //$NON-NLS-1$
 	public static final String NAME = Messages.getString("PosMessage.179"); //$NON-NLS-1$
+	public static final String PREFIX = Messages.getString("PosMessage.321"); //$NON-NLS-1$
+	public static final String DEFAULT = Messages.getString("DEFAULT"); //$NON-NLS-1$
 	public static final String CODE = Messages.getString("PosMessage.312"); //$NON-NLS-1$
 	public static final String SYMBOL = Messages.getString("PosMessage.313"); //$NON-NLS-1$
 	public static final String MAIN = Messages.getString("PosMessage.314"); //$NON-NLS-1$

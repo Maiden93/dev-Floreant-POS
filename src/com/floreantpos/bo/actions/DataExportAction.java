@@ -150,7 +150,7 @@ public class DataExportAction extends AbstractAction {
 
 			@Override
 			public String getDescription() {
-				return "XML File"; //$NON-NLS-1$
+				return Messages.getString("DataExportAction.5"); //$NON-NLS-1$
 			}
 
 			@Override

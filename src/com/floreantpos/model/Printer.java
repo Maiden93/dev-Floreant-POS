@@ -17,6 +17,8 @@
  */
 package com.floreantpos.model;
 
+import com.floreantpos.Messages;
+
 public class Printer {
 	private VirtualPrinter virtualPrinter;
 	private String deviceName;
@@ -50,7 +52,7 @@ public class Printer {
 
 	public String getDeviceName() {
 		if (deviceName == null) {
-			return "No Print";
+			return Messages.getString("AddPrinterDialog.2");
 		}
 		return deviceName;
 	}

@@ -68,9 +68,9 @@ public class QuickMaintenanceExplorer extends TransparentPanel {
 		int btnSize = PosUIManager.getSize(60);
 		btnCursor = new POSToggleButton();
 		btnCursor.setIcon(IconFactory.getIcon("/ui_icons/", "cursor_hand.png"));
-		btnEdit = new POSToggleButton("EDIT");
-		btnCopy = new POSToggleButton("COPY");
-		btnDelete = new POSToggleButton("DEL");
+		btnEdit = new POSToggleButton(Messages.getString("PosMessage.84"));
+		btnCopy = new POSToggleButton(Messages.getString("PosMessage.262"));
+		btnDelete = new POSToggleButton(com.floreantpos.POSConstants.DELETE);
 		btni18 = new POSToggleButton("i18n");
 
 		ButtonGroup group = new ButtonGroup();

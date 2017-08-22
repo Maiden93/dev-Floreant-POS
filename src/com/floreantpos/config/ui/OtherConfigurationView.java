@@ -34,7 +34,7 @@ import com.floreantpos.swing.FixedLengthTextField;
 import com.floreantpos.util.GlobalConfigUtil;
 
 public class OtherConfigurationView extends ConfigurationView {
-	public static final String CONFIG_TAB_OTHER = "Others"; //$NON-NLS-1$
+	public static final String CONFIG_TAB_OTHER = Messages.getString("OtherConfigurationView.1"); //$NON-NLS-1$
 	private FixedLengthTextField tfMapApiKey;
 
 	public OtherConfigurationView() {

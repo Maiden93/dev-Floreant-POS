@@ -114,7 +114,7 @@ public class MenuItemSizeExplorer extends TransparentPanel {
 
 		});
 
-		JButton defaultButton = new JButton("Set Default");
+		JButton defaultButton = new JButton(Messages.getString("DEFAULT_SET"));
 		defaultButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {

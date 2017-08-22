@@ -34,6 +34,7 @@ import java.util.Map;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import org.apache.commons.lang.StringUtils;
+import org.jfree.util.Log;
 
 import com.floreantpos.Messages;
 import com.floreantpos.main.Application;
@@ -747,6 +748,8 @@ public class Ticket extends BaseTicket {
 		removeProperty(CUSTOMER_NAME);
 		removeProperty(CUSTOMER_MOBILE);
 		removeProperty(CUSTOMER_ZIP_CODE);
+		//Log.info(CUSTOMER_ID);
+		//System.out.println("Paso removes");
 	}
 
 	public String getSortOrder() {

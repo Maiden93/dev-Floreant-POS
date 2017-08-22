@@ -85,7 +85,7 @@ public class PrinterGroupView extends JPanel {
 		});
 		panel.add(btnDelete);
 
-		JButton btnTest = new JButton("PROBAR"); //$NON-NLS-1$
+		JButton btnTest = new JButton(POSConstants.TEST); //$NON-NLS-1$
 		btnTest.addActionListener(new ActionListener() {
 
 			@Override
@@ -179,12 +179,12 @@ public class PrinterGroupView extends JPanel {
 		for (TerminalPrinters terminalPrinter : terminalPrinters) {
 			if (printerList.contains(terminalPrinter.getVirtualPrinter().getName())) {
 				try {
-					String title = "System Information"; //$NON-NLS-1$
+					String title = Messages.getString("PosMessage.318"); //$NON-NLS-1$
 					String data = terminalPrinter.getPrinterName() + "-" + terminalPrinter.getVirtualPrinter().getName(); //$NON-NLS-1$
 					data += "\n Terminal : " + Application.getInstance().getTerminal().getName(); //$NON-NLS-1$
-					data += "\n Current User : " + Application.getCurrentUser().getFirstName(); //$NON-NLS-1$
-					data += "\n Floreant Version : " + Application.VERSION; //$NON-NLS-1$
-					data += "\n Database Name : " + AppConfig.getDatabaseName() + AppConfig.getDatabaseHost() + AppConfig.getDatabasePort(); //$NON-NLS-1$
+					data += "\n "+Messages.getString("PosMessage.319")+" : " + Application.getCurrentUser().getFirstName(); //$NON-NLS-1$
+					data += "\n "+Messages.getString("PosMessage.320")+" : " + Application.VERSION; //$NON-NLS-1$
+					data += "\n "+Messages.getString("DbPanel.12")+" : " + AppConfig.getDatabaseName() + AppConfig.getDatabaseHost() + AppConfig.getDatabasePort(); //$NON-NLS-1$
 					ReceiptPrintService.testPrinter(terminalPrinter.getPrinterName(), title, data);
 
 				} catch (Exception e) {

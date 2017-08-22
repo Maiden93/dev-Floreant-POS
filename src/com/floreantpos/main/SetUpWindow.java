@@ -46,6 +46,7 @@ import org.apache.commons.lang.StringUtils;
 
 import com.floreantpos.Database;
 import com.floreantpos.Messages;
+import com.floreantpos.POSConstants;
 import com.floreantpos.PosLog;
 import com.floreantpos.bo.actions.DataImportAction;
 import com.floreantpos.config.AppConfig;
@@ -161,13 +162,13 @@ public class SetUpWindow extends JFrame implements ActionListener {
 		if (StringUtils.isNotEmpty(databaseProviderName)) {
 			databaseCombo.setSelectedItem(Database.getByProviderName(databaseProviderName));
 		}
-		btnTestConnection = new PosButton("PROBAR"); //$NON-NLS-1$
+		btnTestConnection = new PosButton(POSConstants.TEST); //$NON-NLS-1$
 		btnTestConnection.setActionCommand(TEST);
 
-		btnCreateDb = new PosButton("Create New"); //$NON-NLS-1$
+		btnCreateDb = new PosButton(Messages.getString("DatabaseConfigurationDialog.39")); //$NON-NLS-1$
 		btnCreateDb.setActionCommand(CREATE_DATABASE);
 
-		btnCreateSampleData = new PosButton("Create sample data"); //$NON-NLS-1$
+		btnCreateSampleData = new PosButton(Messages.getString("DatabaseConfigurationDialog.40")); //$NON-NLS-1$
 		btnCreateSampleData.setActionCommand(CREATE_SAMPLE_DATA);
 
 		databaseConfigPanel.add(new JLabel(Messages.getString("DatabaseConfigurationDialog.8"))); //$NON-NLS-1$
@@ -180,7 +181,7 @@ public class SetUpWindow extends JFrame implements ActionListener {
 		lblServerAddress = new JLabel(Messages.getString("DatabaseConfigurationDialog.10") + ":"); //$NON-NLS-1$ //$NON-NLS-2$
 		databaseConfigPanel.add(lblServerAddress);
 		databaseConfigPanel.add(tfServerAddress, "grow, split 3"); //$NON-NLS-1$
-		lblServerPort = new JLabel("Port" + ":"); //$NON-NLS-1$ //$NON-NLS-2$
+		lblServerPort = new JLabel(Messages.getString("DatabaseConfigurationDialog.13") + ":"); //$NON-NLS-1$ //$NON-NLS-2$
 		databaseConfigPanel.add(lblServerPort);
 		tfServerPort.setHorizontalAlignment(JTextField.RIGHT);
 		databaseConfigPanel.add(tfServerPort, "w 50!,wrap"); //$NON-NLS-1$
@@ -190,7 +191,7 @@ public class SetUpWindow extends JFrame implements ActionListener {
 		lblUserName = new JLabel(Messages.getString("DatabaseConfigurationDialog.19") + ":"); //$NON-NLS-1$ //$NON-NLS-2$
 		databaseConfigPanel.add(lblUserName);
 		databaseConfigPanel.add(tfUserName, "grow, split 3"); //$NON-NLS-1$
-		lblDbPassword = new JLabel("Password" + ":"); //$NON-NLS-1$ //$NON-NLS-2$
+		lblDbPassword = new JLabel(Messages.getString("DatabaseConfigurationDialog.22") + ":"); //$NON-NLS-1$ //$NON-NLS-2$
 		databaseConfigPanel.add(lblDbPassword);
 		databaseConfigPanel.add(tfPassword, "grow, wrap"); //$NON-NLS-1$
 
@@ -238,19 +239,19 @@ public class SetUpWindow extends JFrame implements ActionListener {
 		userPanel.add(lblId, "aligny center"); //$NON-NLS-1$
 		userPanel.add(tfUserId, "growx,aligny center,wrap"); //$NON-NLS-1$
 
-		lblFirstName.setText("First Name"); //$NON-NLS-1$
+		lblFirstName.setText(POSConstants.NAME); //$NON-NLS-1$
 		userPanel.add(lblFirstName, "aligny center"); //$NON-NLS-1$
 		userPanel.add(tfFirstName, "growx,aligny center,split 3"); //$NON-NLS-1$
 
-		lblLastName.setText("Last Name"); //$NON-NLS-1$
+		lblLastName.setText(POSConstants.LAST_NAME); //$NON-NLS-1$
 		userPanel.add(lblLastName, "aligny center"); //$NON-NLS-1$
 		userPanel.add(tfLastName, "growx,aligny ,w 200!,center,wrap"); //$NON-NLS-1$
 
-		lblSecretKey.setText("Secret Key"); //$NON-NLS-1$
+		lblSecretKey.setText(Messages.getString("SetUpWindow.4")); //$NON-NLS-1$
 		userPanel.add(lblSecretKey, "aligny center"); //$NON-NLS-1$
 		userPanel.add(tfPassword1, "growx,aligny center,split 3"); //$NON-NLS-1$
 
-		lblConfirmSecretKey.setText("Confirm Secret Key"); //$NON-NLS-1$
+		lblConfirmSecretKey.setText(Messages.getString("SetUpWindow.5")); //$NON-NLS-1$
 		userPanel.add(lblConfirmSecretKey, "aligny center"); //$NON-NLS-1$
 		userPanel.add(tfPassword2, "growx,w 200!,aligny center"); //$NON-NLS-1$
 
@@ -267,7 +268,7 @@ public class SetUpWindow extends JFrame implements ActionListener {
 		contentPanel.add(tfTerminalNumber, "aligny top,wrap"); //$NON-NLS-1$
 
 		tfSecretKeyLength = new IntegerTextField(3);
-		contentPanel.add(new JLabel("Default password length")); //$NON-NLS-1$
+		contentPanel.add(new JLabel(Messages.getString("SetUpWindow.7"))); //$NON-NLS-1$
 		contentPanel.add(tfSecretKeyLength, "wrap"); //$NON-NLS-1$
 
 		chkAutoLogoff = new JCheckBox(Messages.getString("SetUpWindow.22")); //$NON-NLS-1$
@@ -426,7 +427,7 @@ public class SetUpWindow extends JFrame implements ActionListener {
 					DatabaseUtil.initialize();
 					saveConfigData();
 				} catch (Exception ex) {
-					int i = JOptionPane.showConfirmDialog(this, "Connection Failed. Do you want to save?", "Connection status!", JOptionPane.YES_NO_OPTION); //$NON-NLS-1$ //$NON-NLS-2$
+					int i = JOptionPane.showConfirmDialog(this, Messages.getString("DatabaseConfigurationDialog.41"), Messages.getString("DatabaseConfigurationDialog.42"), JOptionPane.YES_NO_OPTION); //$NON-NLS-1$ //$NON-NLS-2$
 					if (i == JOptionPane.YES_OPTION) {
 						System.exit(1);
 					}
@@ -470,7 +471,7 @@ public class SetUpWindow extends JFrame implements ActionListener {
 		TerminalDAO.getInstance().saveOrUpdate(terminal);
 		POSMessageDialog.showMessage(Messages.getString("SetUpWindow.0")); //$NON-NLS-1$
 
-		int i = JOptionPane.showConfirmDialog(this, "Do you want to start application?", "Message", JOptionPane.YES_NO_OPTION); //$NON-NLS-1$ //$NON-NLS-2$
+		int i = JOptionPane.showConfirmDialog(this, Messages.getString("SetUpWindow.2"), Messages.getString("SetUpWindow.6"), JOptionPane.YES_NO_OPTION); //$NON-NLS-1$ //$NON-NLS-2$
 		if (i != JOptionPane.YES_OPTION) {
 			System.exit(1);
 		}
@@ -536,7 +537,7 @@ public class SetUpWindow extends JFrame implements ActionListener {
 	}
 
 	public void setTitle(String title) {
-		super.setTitle("Application Setup"); //$NON-NLS-1$
+		super.setTitle(Messages.getString("SetUpWindow.1")); //$NON-NLS-1$
 	}
 
 	private void setFieldsVisible(boolean visible) {

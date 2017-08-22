@@ -54,7 +54,7 @@ import com.floreantpos.ui.views.order.ViewPanel;
 
 public class KitchenDisplayView extends ViewPanel implements ActionListener {
 
-	public final static String VIEW_NAME = "KD"; //$NON-NLS-1$
+	public final static String VIEW_NAME = Messages.getString("KitchenDisplayView.0"); //$NON-NLS-1$
 	private static KitchenDisplayView instance;
 	private JComboBox<Printer> cbPrinters = new JComboBox<Printer>();
 	private JComboBox<OrderType> cbTicketTypes = new JComboBox<OrderType>();

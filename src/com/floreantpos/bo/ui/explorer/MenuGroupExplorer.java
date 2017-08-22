@@ -97,7 +97,7 @@ public class MenuGroupExplorer extends TransparentPanel {
 		JButton addButton = explorerButton.getAddButton();
 		JButton deleteButton = explorerButton.getDeleteButton();
 
-		JButton btnChangeCategory = new JButton("Change Menu Category");
+		JButton btnChangeCategory = new JButton(Messages.getString("MenuGroupExplorer.2"));
 
 		editButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -211,7 +211,7 @@ public class MenuGroupExplorer extends TransparentPanel {
 
 	protected MenuCategory getSelectedMenuCategory(MenuCategory defaultValue) {
 		List<MenuCategory> menuCategorys = MenuCategoryDAO.getInstance().findAll();
-		ComboItemSelectionDialog dialog = new ComboItemSelectionDialog("SELECT GROUP", "Menu Category", menuCategorys, false);
+		ComboItemSelectionDialog dialog = new ComboItemSelectionDialog(Messages.getString("MenuGroupExplorer.3"), Messages.getString("MenuGroupExplorer.4"), menuCategorys, false);
 		dialog.setSelectedItem(defaultValue);
 		dialog.setVisibleNewButton(true);
 		dialog.pack();

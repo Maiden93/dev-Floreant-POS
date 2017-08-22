@@ -107,7 +107,7 @@ public class DrawerAssignmentAction extends PosAction {
 
 			User user = dialog.getSelectedUser();
 			if (!user.isClockedIn()) {
-				POSMessageDialog.showError("No se puede asignar la caja. El usuario seleccionado no está activo.");
+				POSMessageDialog.showError(Messages.getString("DrawerAssignmentAction.12"));
 				return;
 			}
 

@@ -39,6 +39,8 @@ import javax.swing.event.ListSelectionListener;
 import net.miginfocom.swing.MigLayout;
 
 import org.apache.commons.lang.StringUtils;
+import org.jfree.util.Log;
+import org.apache.log4j.Logger;
 
 import com.floreantpos.IconFactory;
 import com.floreantpos.Messages;
@@ -58,6 +60,7 @@ import com.floreantpos.ui.dialog.BeanEditorDialog;
 import com.floreantpos.ui.dialog.POSDialog;
 import com.floreantpos.ui.dialog.POSMessageDialog;
 import com.floreantpos.ui.forms.QuickCustomerForm;
+import com.floreantpos.ui.views.order.MenuItemView;
 import com.floreantpos.util.POSUtil;
 import com.floreantpos.util.TicketAlreadyExistsException;
 
@@ -200,17 +203,14 @@ public class DefaultCustomerListView extends CustomerSelector {
 			}
 		});
 
-		btnRemoveCustomer = new PosButton(Messages.getString("CustomerSelectionDialog.26")); //$NON-NLS-1$
-		btnRemoveCustomer.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				doRemoveCustomerFromTicket();
-			}
-		});
-		panel.add(btnRemoveCustomer, ""); //$NON-NLS-1$
-
 		PosButton btnSelect = new PosButton(Messages.getString("CustomerSelectionDialog.28")); //$NON-NLS-1$
 		btnSelect.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if (ticket != null) {
+					logger.debug("Ticket no nulo s");
+				}else {
+					logger.debug("Ticket nulo s"); 
+				}
 				if (isCreateNewTicket()) {
 					doCreateNewTicket();
 				}
@@ -220,6 +220,19 @@ public class DefaultCustomerListView extends CustomerSelector {
 			}
 		});
 		panel.add(btnSelect, ""); //$NON-NLS-1$
+		
+		btnRemoveCustomer = new PosButton(Messages.getString("CustomerSelectionDialog.26")); //$NON-NLS-1$
+		btnRemoveCustomer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (ticket != null) {
+					logger.debug("Ticket no nulo r");
+				}else {
+					logger.debug("Ticket nulo r"); 
+				}
+				doRemoveCustomerFromTicket();
+			}
+		});
+		panel.add(btnRemoveCustomer, ""); //$NON-NLS-1$
 
 		btnCancel = new PosButton(Messages.getString("CustomerSelectionDialog.29")); //$NON-NLS-1$
 		btnCancel.addActionListener(new ActionListener() {
@@ -229,7 +242,7 @@ public class DefaultCustomerListView extends CustomerSelector {
 		});
 		panel.add(btnCancel, ""); //$NON-NLS-1$
 
-		btnNext = new PosButton("NEXT");
+		btnNext = new PosButton(Messages.getString("PosMessage.324"));
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (customerListTableModel.hasNext()) {
@@ -239,7 +252,7 @@ public class DefaultCustomerListView extends CustomerSelector {
 
 			}
 		});
-		btnPrevious = new PosButton("PREVIOUS");
+		btnPrevious = new PosButton(Messages.getString("PosMessage.325"));
 		btnPrevious.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (customerListTableModel.hasPrevious()) {
@@ -317,10 +330,41 @@ public class DefaultCustomerListView extends CustomerSelector {
 			}
 			closeDialog(false);
 			OrderServiceFactory.getOrderService().createNewTicket(getOrderType(), null, selectedCustomer);
-
 		} catch (TicketAlreadyExistsException e) {
 
 		}
+	}
+	
+	private void doRemoveCustomer() {
+		try {
+			ticket = this.getTicket();
+			logger.debug(ticket.getId()); 
+			logger.debug(ticket.getProperty("CUSTOMER_ID")); 
+			//if (selectedCustomer == null) {
+			//	return;
+			//}
+			if (ticket != null) {
+				logger.debug("Ticket no nulo"); 
+				//ticket.setCustomer(customer);
+				//TicketDAO.getInstance().saveOrUpdate(ticket);Log.info("ticket.removeCustomer();");
+				ticket.removeCustomer();
+				logger.debug("Ticket customer remover"); 
+				logger.debug(ticket.getId()); 
+				logger.debug(ticket.getProperty("CUSTOMER_ID"));
+				if(TicketDAO.getInstance()!= null){
+					TicketDAO.getInstance().saveOrUpdate(ticket);
+				}else {
+					logger.debug("Ticket DAO ERROR"); 
+				}
+				
+				logger.debug("Ticket customer DAO");
+			}else {
+				logger.debug("Ticket nulo"); 
+			}
+		} catch (Exception e) {
+
+		}
+		closeDialog(false);
 	}
 
 	protected void doRemoveCustomerFromTicket() {
@@ -329,7 +373,22 @@ public class DefaultCustomerListView extends CustomerSelector {
 		if (option != JOptionPane.YES_OPTION) {
 			return;
 		}
-
+		doRemoveCustomer();
+		
+		//setCanceled(false);
+		//dispose();
+	}
+	
+	
+	
+	
+	protected void doRemoveCustomerFromTicketbackup() {
+		int option = POSMessageDialog.showYesNoQuestionDialog(this,
+				Messages.getString("CustomerSelectionDialog.2"), Messages.getString("CustomerSelectionDialog.32")); //$NON-NLS-1$ //$NON-NLS-2$
+		if (option != JOptionPane.YES_OPTION) {
+			return;
+		}
+		Log.info("ticket.removeCustomer();");
 		ticket.removeCustomer();
 		TicketDAO.getInstance().saveOrUpdate(ticket);
 		//setCanceled(false);
@@ -425,4 +484,5 @@ public class DefaultCustomerListView extends CustomerSelector {
 	public void redererCustomers() {
 
 	}
+	private static Logger logger = Logger.getLogger(MenuItemView.class);
 }
