@@ -15,12 +15,14 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.filechooser.FileSystemView;
 import javax.swing.filechooser.FileView;
 
+import com.floreantpos.POSConstants;
+
 public class POSFileChooser extends JFileChooser {
 
 	FileNameExtensionFilter filter = new FileNameExtensionFilter("Image Files", "jpg", "jpeg", "png", "gif");
 
 	public POSFileChooser() {
-		setDialogTitle("FloreantPOS");
+		setDialogTitle(POSConstants.FLOREANTPOS);
 		setAcceptAllFileFilterUsed(false);
 		setFileFilter(filter);
 		setAccessory(new ImagePreview(this));

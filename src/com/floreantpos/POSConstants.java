@@ -41,6 +41,7 @@ public class POSConstants {
 	public static final String PIZZA = Messages.getString("PizzaItem.0"); //$NON-NLS-1$
 	public static final String TEST = Messages.getString("PosMessage.322"); //$NON-NLS-1$
 	public static final String TEST2 = Messages.getString("PosMessage.323"); //$NON-NLS-1$
+	public static final String FLOREANTPOS = Messages.getString("FLOREANTPOS"); //$NON-NLS-1$
 	//public static final String USER_TYPE = Messages.getString("PosMessage.316"); //$NON-NLS-1$
 
 	public static final String CashierSwitchBoardView_LABEL_ORDER = Messages.getString("CashierSwitchBoardView.LABEL_ORDER"); //$NON-NLS-1$

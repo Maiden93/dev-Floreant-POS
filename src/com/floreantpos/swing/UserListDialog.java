@@ -75,7 +75,7 @@ public class UserListDialog extends OkCancelOptionDialog {
 			return;
 		}
 		if (!user.isClockedIn()) {
-			POSMessageDialog.showError("Can't assign drawer. Selected user is not clocked in.");
+			POSMessageDialog.showError(Messages.getString("UserListDialog.6"));
 			return;
 //			User loginUser = Application.getCurrentUser();
 //			String userString = user.getFullName() + " is";

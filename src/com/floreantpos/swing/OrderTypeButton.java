@@ -22,6 +22,7 @@ import java.awt.event.ActionListener;
 import java.util.Set;
 
 import com.floreantpos.IconFactory;
+import com.floreantpos.Messages;
 import com.floreantpos.POSConstants;
 import com.floreantpos.PosLog;
 import com.floreantpos.bo.ui.explorer.QuickMaintenanceExplorer;
@@ -65,7 +66,7 @@ public class OrderTypeButton extends PosButton implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (!hasPermission()) {
-			POSMessageDialog.showError("You do not have permission to create order");
+			POSMessageDialog.showError(Messages.getString("OrderInfoDialog.5"));
 			return;
 		}
 		if (RootView.getInstance().isMaintenanceMode()) {

@@ -108,7 +108,7 @@ public class BarTabButton extends PosButton {
 
 		int inputUserId = UserDAO.getInstance().findUserBySecretKey(password).getAutoId();
 		if (inputUserId != user.getAutoId()) {
-			POSMessageDialog.showError(Application.getPosWindow(), "Incorrect password"); //$NON-NLS-1$
+			POSMessageDialog.showError(Application.getPosWindow(), Messages.getString("PosMessage.326")); //$NON-NLS-1$
 			return false;
 		}
 		return true;

@@ -28,6 +28,7 @@ import javax.swing.JTextArea;
 
 import net.miginfocom.swing.MigLayout;
 
+import com.floreantpos.Messages;
 import com.floreantpos.main.Application;
 import com.floreantpos.ui.dialog.OkCancelOptionDialog;
 import com.floreantpos.ui.dialog.POSMessageDialog;
@@ -78,7 +79,7 @@ public class PosOptionPane extends OkCancelOptionDialog {
 	public void doOk() {
 		String s = taInputText.getText();
 		if (s.isEmpty()) {
-			POSMessageDialog.showError(Application.getPosWindow(), "Please enter value");//$NON-NLS-1$
+			POSMessageDialog.showError(Application.getPosWindow(), Messages.getString("PosMessage.327"));//$NON-NLS-1$
 			return;
 		}
 		setValue(taInputText.getText());

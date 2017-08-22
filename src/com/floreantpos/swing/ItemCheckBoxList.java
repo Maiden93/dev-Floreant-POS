@@ -10,6 +10,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 
+import com.floreantpos.POSConstants;
 import com.floreantpos.model.MenuCategory;
 import com.floreantpos.model.MenuGroup;
 import com.floreantpos.model.MenuItem;
@@ -156,13 +157,13 @@ public class ItemCheckBoxList<E> extends CheckBoxList {
 
 			switch (col) {
 				case 0:
-				return "ALL";
+				return POSConstants.ALL;
 				
 				case 1:
-					return "Name";
+					return POSConstants.NAME;
 					
 				case 2:
-					return "Price";
+					return POSConstants.PRICE;
 
 				default:
 					return null;
