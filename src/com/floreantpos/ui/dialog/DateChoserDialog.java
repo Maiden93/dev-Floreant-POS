@@ -21,6 +21,7 @@ import javax.swing.border.TitledBorder;
 
 import net.miginfocom.swing.MigLayout;
 
+import com.floreantpos.POSConstants;
 import com.floreantpos.PosLog;
 import com.floreantpos.main.Application;
 import com.floreantpos.model.AttendenceHistory;
@@ -33,6 +34,7 @@ import com.floreantpos.swing.PosButton;
 import com.floreantpos.ui.util.UiUtil;
 import com.floreantpos.util.POSUtil;
 import com.floreantpos.util.ShiftUtil;
+import com.mysql.jdbc.Messages;
 
 public class DateChoserDialog extends POSDialog {
 	private org.jdesktop.swingx.JXDatePicker tbStartDate;
@@ -77,7 +79,7 @@ public class DateChoserDialog extends POSDialog {
 		cbEmployees = new JComboBox<User>(new ComboBoxModel(employees));
 
 		JPanel topPanel = new JPanel(new MigLayout());
-		topPanel.add(new JLabel("Select employee:"));
+		topPanel.add(new JLabel(Messages.getString("DateChooser.0")+":"));
 		topPanel.add(cbEmployees);
 		mainPanel.add(topPanel, BorderLayout.NORTH);
 
@@ -142,7 +144,7 @@ public class DateChoserDialog extends POSDialog {
 			}
 		});
 
-		chkClockOut = new JCheckBox("Clock Out: ");
+		chkClockOut = new JCheckBox(Messages.getString("Clockout")+": ");
 		chkClockOut.addActionListener(new ActionListener() {
 
 			@Override
@@ -151,30 +153,30 @@ public class DateChoserDialog extends POSDialog {
 			}
 		});
 
-		JLabel lblClockIn = new JLabel("Clock In: ");
+		JLabel lblClockIn = new JLabel(Messages.getString("Clockin")+": ");
 		panel.add(lblClockIn, "cell 0 0,right"); //$NON-NLS-1$
-		panel.add(new JLabel("Date"), "cell 1 0"); //$NON-NLS-1$
+		panel.add(new JLabel(POSConstants.DATE), "cell 1 0"); //$NON-NLS-1$
 		panel.add(tbStartDate, "cell 2 0");
-		panel.add(new JLabel("Hour"), "cell 3 0"); //$NON-NLS-1$
+		panel.add(new JLabel(POSConstants.HOUR), "cell 3 0"); //$NON-NLS-1$
 		panel.add(tfStartHour, "w 40!,cell 4 0");
-		panel.add(new JLabel("Min"), "cell 5 0");
+		panel.add(new JLabel(POSConstants.MIN), "cell 5 0");
 		panel.add(tfStartMin, "w 40!,cell 6 0");
 		panel.add(rbStartAm, "cell 7 0");
 		panel.add(rbStartPm, "cell 8 0");
 
 		panel.add(chkClockOut, "cell 0 1"); //$NON-NLS-1$
-		panel.add(new JLabel("Date"), "cell 1 1"); //$NON-NLS-1$
+		panel.add(new JLabel(POSConstants.DATE), "cell 1 1"); //$NON-NLS-1$
 		panel.add(tbEndDate, "cell 2 1");
-		panel.add(new JLabel("Hour"), "cell 3 1"); //$NON-NLS-1$
+		panel.add(new JLabel(POSConstants.HOUR), "cell 3 1"); //$NON-NLS-1$
 		panel.add(tfEndHour, "w 40!,cell 4 1");
-		panel.add(new JLabel("Min"), "cell 5 1");
+		panel.add(new JLabel(POSConstants.MIN), "cell 5 1");
 		panel.add(tfEndMin, "w 40!,cell 6 1");
 		panel.add(rbEndAm, "cell 7 1");
 		panel.add(rbEndPm, "cell 8 1");
 
 		JPanel footerPanel = new JPanel(new MigLayout("al center center", "sg", ""));
-		btnOk = new PosButton("OK");
-		btnCancel = new PosButton("CANCEL");
+		btnOk = new PosButton(POSConstants.OK);
+		btnCancel = new PosButton(POSConstants.CANCEL);
 		btnCancel.setPreferredSize(new Dimension(100, 0));
 
 		btnCancel.addActionListener(new ActionListener() {
@@ -283,7 +285,7 @@ public class DateChoserDialog extends POSDialog {
 		PosLog.info(DateChoserDialog.class, "" + clockOutTime.getTime().getTime());
 
 		if (clockInTime.getTime().getTime() > clockOutTime.getTime().getTime()) {
-			POSMessageDialog.showMessage(POSUtil.getBackOfficeWindow(), "Clock in can not be greater than clock out");
+			POSMessageDialog.showMessage(POSUtil.getBackOfficeWindow(), Messages.getString("DateChooser.1"));
 			return false;
 		}
 

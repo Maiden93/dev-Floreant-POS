@@ -31,6 +31,7 @@ import javax.swing.JTextField;
 import net.miginfocom.swing.MigLayout;
 
 import com.floreantpos.IconFactory;
+import com.floreantpos.Messages;
 import com.floreantpos.POSConstants;
 import com.floreantpos.swing.PosButton;
 import com.floreantpos.swing.PosUIManager;
@@ -85,7 +86,7 @@ public class BasicWeightInputDialog extends OkCancelOptionDialog implements Acti
 				else {
 					posButton.setIcon(icon);
 					if (POSConstants.CLEAR_ALL.equals(buttonText)) {
-						posButton.setText("CLEAR ALL");
+						posButton.setText(Messages.getString("PosMessage.119"));
 					}
 				}
 

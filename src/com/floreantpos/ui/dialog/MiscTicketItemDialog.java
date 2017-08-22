@@ -111,7 +111,7 @@ public class MiscTicketItemDialog extends OkCancelOptionDialog {
 	private void initData() {
 		List<Tax> taxes = TaxDAO.getInstance().findAll();
 
-		cbTax.addItem("Select Tax");
+		cbTax.addItem(Messages.getString("PosMessage.328"));
 		for (Tax tax : taxes) {
 			cbTax.addItem(tax);
 		}

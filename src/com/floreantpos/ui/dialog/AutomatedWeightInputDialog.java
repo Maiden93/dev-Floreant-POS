@@ -139,7 +139,7 @@ public class AutomatedWeightInputDialog extends OkCancelOptionDialog implements 
 
 		group = new ButtonGroup();
 
-		btnRefresh = new PosButton("REFRESH");
+		btnRefresh = new PosButton(POSConstants.REFRESH);
 		btnLB = new POSToggleButton(UNIT_LB);
 		btnOZ = new POSToggleButton(UNIT_OZ);
 		btnKG = new POSToggleButton(UNIT_KG);

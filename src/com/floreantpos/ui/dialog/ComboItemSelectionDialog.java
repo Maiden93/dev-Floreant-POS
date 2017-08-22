@@ -36,6 +36,8 @@ import javax.swing.border.TitledBorder;
 
 import net.miginfocom.swing.MigLayout;
 
+import com.floreantpos.Messages;
+import com.floreantpos.POSConstants;
 import com.floreantpos.model.OrderType;
 import com.floreantpos.swing.CheckBoxList;
 import com.floreantpos.swing.ComboBoxModel;
@@ -55,8 +57,8 @@ public class ComboItemSelectionDialog extends OkCancelOptionDialog {
 	private List items;
 	private String lblText;
 	private Object selectedObject;
-	private PosButton btnNew = new PosButton("New");
-	private JCheckBox chkSelectAll = new JCheckBox("Select All");
+	private PosButton btnNew = new PosButton(POSConstants.NEW);
+	private JCheckBox chkSelectAll = new JCheckBox(Messages.getString("SELECT_ALL"));
 	private JPanel contentPane;
 	private boolean newItem;
 	private boolean allowMutipleSelection;

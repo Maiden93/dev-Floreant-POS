@@ -326,7 +326,7 @@ public class PasswordEntryDialog extends OkCancelOptionDialog implements ActionL
 
 		if (LoginView.getInstance().isBackOfficeLogin()) {
 			if (!user.hasPermission(UserPermission.VIEW_BACK_OFFICE)) {
-				statusLabel.setText("user has no permission to access this view");
+				statusLabel.setText(Messages.getString("PasswordEntryDialog.10"));
 				return false;
 			}
 			return true;
@@ -338,7 +338,7 @@ public class PasswordEntryDialog extends OkCancelOptionDialog implements ActionL
 
 			if (viewName.equals(TableMapView.VIEW_NAME)) {
 				if (!user.hasPermission(UserPermission.CREATE_TICKET)) {
-					statusLabel.setText("user has no permission to access this view");
+					statusLabel.setText(Messages.getString("PasswordEntryDialog.10"));
 					return false;
 				}
 			}/*
@@ -350,7 +350,7 @@ public class PasswordEntryDialog extends OkCancelOptionDialog implements ActionL
 				}*/
 			else if (viewName.equals(SwitchboardOtherFunctionsView.VIEW_NAME)) {
 				if (!user.hasPermission(UserPermission.ALL_FUNCTIONS)) {
-					statusLabel.setText("user has no permission to access this view");
+					statusLabel.setText(Messages.getString("PasswordEntryDialog.10"));
 					return false;
 				}
 			}
@@ -358,14 +358,14 @@ public class PasswordEntryDialog extends OkCancelOptionDialog implements ActionL
 				if (!OrderView.getInstance().getCurrentTicket().getOwner().getUserId().equals(user.getUserId())) {
 					if (!user.hasPermission(UserPermission.CREATE_TICKET)
 							|| (!user.hasPermission(UserPermission.PERFORM_ADMINISTRATIVE_TASK) && !user.hasPermission(UserPermission.PERFORM_MANAGER_TASK))) {
-						statusLabel.setText("user has no permission to access this view");
+						statusLabel.setText(Messages.getString("PasswordEntryDialog.10"));
 						return false;
 					}
 				}
 			}
 			else if (viewName.equals(KitchenDisplayView.VIEW_NAME)) {
 				if (!user.hasPermission(UserPermission.KITCHEN_DISPLAY)) {
-					statusLabel.setText("user has no permission to access this view");
+					statusLabel.setText(Messages.getString("PasswordEntryDialog.10"));
 					return false;
 				}
 			}
@@ -376,7 +376,7 @@ public class PasswordEntryDialog extends OkCancelOptionDialog implements ActionL
 				for (OrderType orderType : orderTypes) {
 					if (TerminalConfig.getDefaultView().equals(orderType.getName())) {
 						if (!user.hasPermission(UserPermission.CREATE_TICKET)) {
-							statusLabel.setText("user has no permission to access this view");
+							statusLabel.setText(Messages.getString("PasswordEntryDialog.10"));
 							return false;
 						}
 					}
@@ -407,7 +407,7 @@ public class PasswordEntryDialog extends OkCancelOptionDialog implements ActionL
 			else */
 			if (TerminalConfig.getDefaultView().equals(KitchenDisplayView.VIEW_NAME)) {
 				if (!user.hasPermission(UserPermission.KITCHEN_DISPLAY)) {
-					statusLabel.setText("user has no permission to access this view");
+					statusLabel.setText(Messages.getString("PasswordEntryDialog.10"));
 					return false;
 				}
 			}

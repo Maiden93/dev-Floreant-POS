@@ -41,6 +41,7 @@ import com.floreantpos.model.dao.CashDrawerDAO;
 import com.floreantpos.swing.DoubleTextField;
 import com.floreantpos.swing.NumericKeypad;
 import com.floreantpos.swing.PosUIManager;
+import com.mysql.jdbc.Messages;
 
 public class MultiCurrencyAssignDrawerDialog extends OkCancelOptionDialog {
 	private List<Currency> currencyList;
@@ -60,8 +61,8 @@ public class MultiCurrencyAssignDrawerDialog extends OkCancelOptionDialog {
 	private void init() {
 		JPanel contentPane = getContentPanel();
 		setOkButtonText(POSConstants.SAVE_BUTTON_TEXT);
-		setTitle("Enter drawer amount");
-		setTitlePaneText("Enter drawer amount");
+		setTitle(Messages.getString("CurrencyDialog.10"));
+		setTitlePaneText(Messages.getString("CurrencyDialog.10"));
 		setResizable(false);
 
 		MigLayout layout = new MigLayout("inset 0", "[grow,fill]", "[grow,fill]"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
@@ -71,8 +72,8 @@ public class MultiCurrencyAssignDrawerDialog extends OkCancelOptionDialog {
 		GridLayout gridLayout = new GridLayout(0, 2, 10, 5);
 		inputPanel.setLayout(gridLayout);
 
-		JLabel lblCurrency = getJLabel("Currency", Font.BOLD, 16, JLabel.CENTER);
-		JLabel lblAmount = getJLabel("Amount", Font.BOLD, 16, JLabel.CENTER);
+		JLabel lblCurrency = getJLabel(POSConstants.CURRENCY, Font.BOLD, 16, JLabel.CENTER);
+		JLabel lblAmount = getJLabel(POSConstants.AMOUNT, Font.BOLD, 16, JLabel.CENTER);
 
 		inputPanel.add(lblCurrency);
 		inputPanel.add(lblAmount);

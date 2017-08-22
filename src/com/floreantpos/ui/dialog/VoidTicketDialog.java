@@ -257,21 +257,21 @@ public class VoidTicketDialog extends POSDialog {
 				double ticketTotalWithoutTips = NumberUtil.roundToTwoDigit(ticket.getTotalAmount() - tipsAmount);
 				double paidAmount = ticket.getPaidAmount();
 
-				refundAmount = NumberSelectionDialog2.takeDoubleInput("Enter refund amount", paidAmount < ticketTotalWithoutTips ? ticket.getPaidAmount()
+				refundAmount = NumberSelectionDialog2.takeDoubleInput(Messages.getString("VoidTicketDialog.2"), paidAmount < ticketTotalWithoutTips ? ticket.getPaidAmount()
 						: paidAmount - tipsAmount);
 
 				if (refundAmount == -1)
 					return;
 
 				if (tipsAmount > 0) {
-					if (POSMessageDialog.showYesNoQuestionDialog(POSUtil.getFocusedWindow(), "Do you want to refund tips?", "Confirm") == JOptionPane.YES_OPTION) {
+					if (POSMessageDialog.showYesNoQuestionDialog(POSUtil.getFocusedWindow(), Messages.getString("VoidTicketDialog.4"), POSConstants.CONFIRM) == JOptionPane.YES_OPTION) {
 						Gratuity gratuity = ticket.getGratuity();
 						gratuity.setRefunded(true);
 						refundAmount += gratuity.getAmount();
 					}
 				}
 				if (refundAmount > paidAmount) {
-					POSMessageDialog.showMessage(POSUtil.getFocusedWindow(), "Refund amount cannot be greater than paid amount.");
+					POSMessageDialog.showMessage(POSUtil.getFocusedWindow(), Messages.getString("VoidTicketDialog.5"));
 					return;
 				}
 				refundTransaction = doCreateRefundTransaction(ticket, refundAmount);

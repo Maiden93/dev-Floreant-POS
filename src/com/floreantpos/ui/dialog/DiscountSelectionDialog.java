@@ -135,7 +135,7 @@ public class DiscountSelectionDialog extends OkCancelOptionDialog implements Act
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (txtSearchItem.getText().equals("")) {
-					POSMessageDialog.showMessage("Introduzca el número de cupón o el código de barras ");
+					POSMessageDialog.showMessage(Messages.getString("DiscountSelectionDialog.1"));
 					return;
 				}
 				if (!addCouponByBarcode(txtSearchItem.getText())) {
@@ -149,7 +149,7 @@ public class DiscountSelectionDialog extends OkCancelOptionDialog implements Act
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				ItemSearchDialog dialog = new ItemSearchDialog(Application.getPosWindow());
-				dialog.setTitle("Buscar cupón");
+				dialog.setTitle(Messages.getString("DiscountSelectionDialog.3"));
 				dialog.pack();
 				dialog.open();
 				if (dialog.isCanceled()) {
@@ -160,7 +160,7 @@ public class DiscountSelectionDialog extends OkCancelOptionDialog implements Act
 
 				if (!addCouponByBarcode(dialog.getValue())) {
 					if (!addCouponById(dialog.getValue())) {
-						POSMessageDialog.showError(Application.getPosWindow(), "Cupón no encontrado");
+						POSMessageDialog.showError(Application.getPosWindow(), Messages.getString("DiscountSelectionDialog.4"));
 					}
 				}
 			}

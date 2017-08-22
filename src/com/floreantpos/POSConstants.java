@@ -354,6 +354,7 @@ public class POSConstants {
 	public static final String DOLLAR = Messages.getString("PosMessage.233"); //$NON-NLS-1$
 	public static final String MIN_QUANTITY = Messages.getString("PosMessage.234"); //$NON-NLS-1$
 	public static final String CURRENCY_NAME_ = Messages.getString("PosMessage.235"); //$NON-NLS-1$
+	public static final String CURRENCY = Messages.getString("CurrencyDialog.9"); //$NON-NLS-1$
 	public static final String PREVIOUS_SALE_AFTER_DRAWER_RESET_ = Messages.getString("PosMessage.236"); //$NON-NLS-1$
 	public static final String SALES_DETAILED_REPORT = Messages.getString("PosMessage.237"); //$NON-NLS-1$
 	public static final String YOU_CANNOT_PARTIALLY_PAY_MULTIPLE_TICKETS_ = Messages.getString("PosMessage.238"); //$NON-NLS-1$

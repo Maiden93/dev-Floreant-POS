@@ -32,6 +32,8 @@ import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
 
+import org.eclipse.jdt.internal.core.util.Messages;
+
 import net.miginfocom.swing.MigLayout;
 
 import com.floreantpos.POSConstants;
@@ -83,8 +85,8 @@ public class MultiCurrencyTenderDialog extends OkCancelOptionDialog {
 	private void init() {
 		JPanel contentPane = getContentPanel();
 		setOkButtonText(POSConstants.SAVE_BUTTON_TEXT);
-		setTitle("Enter tender amount");
-		setTitlePaneText("Due amount: " + CurrencyUtil.getCurrencySymbol() + dueAmount);
+		setTitle(com.floreantpos.Messages.getString("CurrencyDialog.18"));
+		setTitlePaneText(com.floreantpos.Messages.getString("CurrencyDialog.17")+": " + CurrencyUtil.getCurrencySymbol() + dueAmount);
 		setResizable(true);
 
 		MigLayout layout = new MigLayout("inset 0", "[grow,fill]", "[grow,fill]"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
@@ -92,10 +94,10 @@ public class MultiCurrencyTenderDialog extends OkCancelOptionDialog {
 
 		JPanel inputPanel = new JPanel(new MigLayout("fill,ins 0", "[fill][right]30px[120px,grow,fill,right][120px,grow,fill,right][][]", ""));
 
-		inputPanel.add(getJLabel("Currency", Font.BOLD, 16, JLabel.LEADING));
-		inputPanel.add(getJLabel("Remaining", Font.BOLD, 16, JLabel.CENTER), "gapleft 20");
-		inputPanel.add(getJLabel("Tender", Font.BOLD, 16, JLabel.TRAILING), "center");
-		inputPanel.add(getJLabel("Cash Back", Font.BOLD, 16, JLabel.TRAILING), "center");
+		inputPanel.add(getJLabel(POSConstants.CURRENCY, Font.BOLD, 16, JLabel.LEADING));
+		inputPanel.add(getJLabel(com.floreantpos.Messages.getString("CurrencyDialog.16"), Font.BOLD, 16, JLabel.CENTER), "gapleft 20");
+		inputPanel.add(getJLabel(com.floreantpos.Messages.getString("CurrencyDialog.15"), Font.BOLD, 16, JLabel.TRAILING), "center");
+		inputPanel.add(getJLabel(com.floreantpos.Messages.getString("CurrencyDialog.14"), Font.BOLD, 16, JLabel.TRAILING), "center");
 
 		for (Currency currency : currencyList) {
 			CurrencyRow item = new CurrencyRow(currency, dueAmount);
@@ -136,7 +138,7 @@ public class MultiCurrencyTenderDialog extends OkCancelOptionDialog {
 		updateView();
 
 		if (!isValidAmount()) {
-			POSMessageDialog.showMessage(POSUtil.getFocusedWindow(), "Invalid Amount");//$NON-NLS-1$
+			POSMessageDialog.showMessage(POSUtil.getFocusedWindow(), com.floreantpos.Messages.getString("CurrencyDialog.13"));//$NON-NLS-1$
 			return;
 		}
 
@@ -253,8 +255,8 @@ public class MultiCurrencyTenderDialog extends OkCancelOptionDialog {
 		JLabel lblRemainingBalance;
 		JLabel currencyName;
 
-		PosButton btnExact = new PosButton("EXACT");
-		PosButton btnRound = new PosButton("ROUND");
+		PosButton btnExact = new PosButton(com.floreantpos.Messages.getString("CurrencyDialog.11"));
+		PosButton btnRound = new PosButton(com.floreantpos.Messages.getString("CurrencyDialog.12"));
 
 		public CurrencyRow(Currency currency, double dueAmountInMainCurrency) {
 			this.currency = currency;

@@ -39,6 +39,7 @@ import com.floreantpos.swing.DoubleTextField;
 import com.floreantpos.swing.PosButton;
 import com.floreantpos.swing.PosUIManager;
 import com.floreantpos.util.NumberUtil;
+import com.mysql.jdbc.Messages;
 
 public class LengthInputDialog extends OkCancelOptionDialog implements ActionListener {
 	private double defaultValue;
@@ -221,7 +222,7 @@ public class LengthInputDialog extends OkCancelOptionDialog implements ActionLis
 	}
 
 	public static double takeDoubleInput(String title, double initialAmount) {
-		LengthInputDialog dialog = new LengthInputDialog("Please enter length.");
+		LengthInputDialog dialog = new LengthInputDialog(Messages.getString("LengthInputDialog.0"));
 		dialog.setTitlePaneText(title);
 		dialog.setValue(initialAmount);
 		dialog.pack();

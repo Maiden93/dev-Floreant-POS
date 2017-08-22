@@ -33,6 +33,7 @@ import com.floreantpos.swing.ItemCheckBoxList;
 import com.floreantpos.swing.PosButton;
 import com.floreantpos.ui.TitlePanel;
 import com.floreantpos.util.POSUtil;
+import com.mysql.jdbc.Messages;
 
 public class ItemSelectionDialog extends POSDialog implements ActionListener {
 	private TitlePanel titlePanel;
@@ -53,7 +54,7 @@ public class ItemSelectionDialog extends POSDialog implements ActionListener {
 		JPanel contentPane = new JPanel(new BorderLayout(10, 10));
 
 		titlePanel = new TitlePanel();
-		titlePanel.setTitle("Select item");
+		titlePanel.setTitle(Messages.getString("MenuItemExplorer.12"));
 		contentPane.add(titlePanel, BorderLayout.NORTH);
 
 		cbListItems = new ItemCheckBoxList();

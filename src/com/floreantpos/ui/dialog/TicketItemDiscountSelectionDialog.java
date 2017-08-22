@@ -33,6 +33,7 @@ import java.util.List;
 
 import javax.swing.BorderFactory;
 
+import com.floreantpos.Messages;
 import com.floreantpos.POSConstants;
 import com.floreantpos.PosException;
 import com.floreantpos.model.Discount;
@@ -109,7 +110,7 @@ public class TicketItemDiscountSelectionDialog extends OkCancelOptionDialog {
 	@Override
 	public void doOk() {
 		if (addedTicketItems.isEmpty()) {
-			POSMessageDialog.showMessage("Please select one or more item.");
+			POSMessageDialog.showMessage(Messages.getString("MenuItemExplorer.13"));
 			return;
 		}
 		setCanceled(false);

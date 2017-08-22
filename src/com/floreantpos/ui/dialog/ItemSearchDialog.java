@@ -28,6 +28,7 @@ import javax.swing.JTextField;
 
 import net.miginfocom.swing.MigLayout;
 
+import com.floreantpos.Messages;
 import com.floreantpos.POSConstants;
 import com.floreantpos.main.Application;
 import com.floreantpos.swing.PosUIManager;
@@ -81,7 +82,7 @@ public class ItemSearchDialog extends OkCancelOptionDialog {
 	public void doOk() {
 		String s = tfNumber.getText();
 		if (s.equals("0") || s.equals("")) {
-			POSMessageDialog.showError(Application.getPosWindow(), "Please enter barcode or item no.");
+			POSMessageDialog.showError(Application.getPosWindow(), Messages.getString("MenuItemExplorer.9"));
 			return;
 		}
 		setValue(tfNumber.getText());
