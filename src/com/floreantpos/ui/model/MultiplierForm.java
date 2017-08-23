@@ -36,6 +36,7 @@ import javax.swing.JPanel;
 import net.miginfocom.swing.MigLayout;
 
 import com.floreantpos.Messages;
+import com.floreantpos.POSConstants;
 import com.floreantpos.model.Multiplier;
 import com.floreantpos.model.dao.MultiplierDAO;
 import com.floreantpos.swing.DoubleTextField;
@@ -106,16 +107,16 @@ public class MultiplierForm extends BeanEditor {
 
 		JPanel contentPanel = new JPanel(new MigLayout("fillx"));
 
-		contentPanel.add(new javax.swing.JLabel("Name"));
+		contentPanel.add(new javax.swing.JLabel(POSConstants.NAME));
 		contentPanel.add(tfName, "grow,wrap");
 
-		contentPanel.add(new javax.swing.JLabel("Ticket prefix"));
+		contentPanel.add(new javax.swing.JLabel(Messages.getString("MenuModifierForm.15")));
 		contentPanel.add(tfTicketPrefix, "grow,wrap");
 
-		contentPanel.add(new javax.swing.JLabel("Percentage (%)"));
+		contentPanel.add(new javax.swing.JLabel(Messages.getString("MenuModifierForm.16")));
 		contentPanel.add(tfRate, "grow,wrap");
 
-		contentPanel.add(new javax.swing.JLabel("Sort Order"));
+		contentPanel.add(new javax.swing.JLabel(POSConstants.SORT_ORDER));
 		contentPanel.add(tfSortOrder, "grow,wrap");
 
 		contentPanel.add(lblButtonColor);
@@ -192,8 +193,8 @@ public class MultiplierForm extends BeanEditor {
 	public String getDisplayText() {
 		Multiplier multiplier = (Multiplier) getBean();
 		if (multiplier.getName() == null) {
-			return "New multiplier";
+			return Messages.getString("MenuModifierForm.17");
 		}
-		return "Edit multiplier";
+		return Messages.getString("MenuModifierForm.18");
 	}
 }

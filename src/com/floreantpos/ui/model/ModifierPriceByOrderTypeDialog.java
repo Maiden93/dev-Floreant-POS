@@ -38,6 +38,7 @@ import javax.swing.KeyStroke;
 import net.miginfocom.swing.MigLayout;
 
 import com.floreantpos.Messages;
+import com.floreantpos.POSConstants;
 import com.floreantpos.main.Application;
 import com.floreantpos.model.MenuModifier;
 import com.floreantpos.model.OrderType;
@@ -215,11 +216,11 @@ public class ModifierPriceByOrderTypeDialog extends POSDialog {
 		cbOrderTypes = new JComboBox();
 
 		JLabel label3 = new JLabel();
-		label3.setText("Tax:"); //$NON-NLS-1$
+		label3.setText(POSConstants.TAX+":"); //$NON-NLS-1$
 		cbTax = new JComboBox(new DefaultComboBoxModel(TaxDAO.getInstance().findAll().toArray()));
 
 		JLabel lblExtraTax = new JLabel();
-		lblExtraTax.setText("Extra tax:"); //$NON-NLS-1$
+		lblExtraTax.setText(Messages.getString("MenuModifierForm.14")+":"); //$NON-NLS-1$
 		cbExtraTax = new JComboBox(new DefaultComboBoxModel(TaxDAO.getInstance().findAll().toArray()));
 
 		final JLabel label2 = new JLabel();
@@ -227,7 +228,7 @@ public class ModifierPriceByOrderTypeDialog extends POSDialog {
 		tfPrice = new JTextField();
 
 		final JLabel lblExtraPrice = new JLabel();
-		lblExtraPrice.setText("Extra price");
+		lblExtraPrice.setText(Messages.getString("MenuModifierForm.13"));
 		tfExtraPrice = new JTextField();
 
 		JPanel panel = new JPanel(new MigLayout("", "grow", "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$

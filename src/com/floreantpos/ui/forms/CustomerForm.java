@@ -47,6 +47,7 @@ import org.apache.commons.lang.StringUtils;
 import org.hibernate.StaleObjectStateException;
 
 import com.floreantpos.Messages;
+import com.floreantpos.POSConstants;
 import com.floreantpos.PosLog;
 import com.floreantpos.bo.ui.BOMessageDialog;
 import com.floreantpos.model.Customer;
@@ -542,7 +543,7 @@ public class CustomerForm extends BeanEditor<Customer> {
 			if (bean2 == null)
 				return false;
 
-			int option = POSMessageDialog.showYesNoQuestionDialog(POSUtil.getBackOfficeWindow(), "Are you sure to delete selected table?", "Confirm"); //$NON-NLS-1$ //$NON-NLS-2$
+			int option = POSMessageDialog.showYesNoQuestionDialog(POSUtil.getBackOfficeWindow(), Messages.getString("CustomerForm.66"), POSConstants.CONFIRM); //$NON-NLS-1$ //$NON-NLS-2$
 			if (option != JOptionPane.YES_OPTION) {
 				return false;
 			}

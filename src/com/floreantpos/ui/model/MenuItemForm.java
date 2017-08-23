@@ -66,6 +66,7 @@ import org.hibernate.Hibernate;
 import org.hibernate.Session;
 
 import com.floreantpos.Messages;
+import com.floreantpos.POSConstants;
 import com.floreantpos.PosLog;
 import com.floreantpos.extension.ExtensionManager;
 import com.floreantpos.extension.InventoryPlugin;
@@ -1088,7 +1089,8 @@ public class MenuItemForm extends BeanEditor<MenuItem> implements ActionListener
 	class PriceByOrderTypeTableModel extends AbstractTableModel {
 		List<String> propertiesKey = new ArrayList<String>();
 
-		String[] cn = { "ORDER TYPE", "PRICE", "TAX" }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+		//String[] cn = { "ORDER TYPE", "PRICE", "TAX" }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+		String[] cn = { POSConstants.ORDER_TYPE.toUpperCase(), POSConstants.PRICE.toUpperCase(), POSConstants.TAX.toUpperCase() }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
 
 		PriceByOrderTypeTableModel(Map<String, String> properties) {
 

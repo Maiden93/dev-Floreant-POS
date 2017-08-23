@@ -123,7 +123,7 @@ public class CouponForm extends BeanEditor implements ItemListener {
 		tfCouponValue = new DoubleTextField();
 		tfMinimumQua = new DoubleTextField();
 		chkEnabled = new JCheckBox(POSConstants.ENABLED); //$NON-NLS-1$
-		chkModifiable = new JCheckBox("Modifiable Amount"); //$NON-NLS-1$
+		chkModifiable = new JCheckBox(Messages.getString("CouponForm.17")); //$NON-NLS-1$
 		chkAutoApply = new JCheckBox(Messages.getString("CouponForm.6")); //$NON-NLS-1$
 		chkNeverExpire = new JCheckBox(Messages.getString("CouponForm.16")); //$NON-NLS-1$
 

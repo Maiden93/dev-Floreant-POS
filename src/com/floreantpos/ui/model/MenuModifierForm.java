@@ -55,6 +55,7 @@ import javax.swing.table.AbstractTableModel;
 import net.miginfocom.swing.MigLayout;
 
 import com.floreantpos.Messages;
+import com.floreantpos.POSConstants;
 import com.floreantpos.config.TerminalConfig;
 import com.floreantpos.model.MenuModifier;
 import com.floreantpos.model.MenuModifierGroup;
@@ -143,7 +144,7 @@ public class MenuModifierForm extends BeanEditor {
 		cbTaxes = new javax.swing.JComboBox();
 		JButton btnNewTax = new javax.swing.JButton();
 		chkPrintToKitchen = new javax.swing.JCheckBox();
-		chkUseFixedPrice = new JCheckBox("Use fixed price");
+		chkUseFixedPrice = new JCheckBox(Messages.getString("MenuModifierForm.10"));
 
 		JButton btnNewPrice = new JButton();
 		JButton btnUpdatePrice = new JButton();
@@ -158,7 +159,7 @@ public class MenuModifierForm extends BeanEditor {
 		JLabel lblName = new javax.swing.JLabel(com.floreantpos.POSConstants.NAME + ":");
 		JLabel lblTranslatedName = new JLabel(Messages.getString("MenuModifierForm.0")); //$NON-NLS-1$
 		JLabel lblModifierGroup = new javax.swing.JLabel(com.floreantpos.POSConstants.GROUP + ":");
-		JLabel lblPrice = new javax.swing.JLabel("Price" + ":");
+		JLabel lblPrice = new javax.swing.JLabel(POSConstants.PRICE + ":");
 		JLabel lblExtraPrice = new javax.swing.JLabel(com.floreantpos.POSConstants.EXTRA_PRICE + ":");
 		JLabel lblSortOrder = new JLabel(Messages.getString("MenuModifierForm.15")); //$NON-NLS-1$
 		JLabel lblTaxRate = new javax.swing.JLabel(com.floreantpos.POSConstants.TAX_RATE + ":");
@@ -229,7 +230,7 @@ public class MenuModifierForm extends BeanEditor {
 		tabButtonStyle.add(lblTextColor); //$NON-NLS-1$
 		tabButtonStyle.add(btnTextColor); //$NON-NLS-1$
 
-		jTabbedPane1.addTab("Button Style", tabButtonStyle); //$NON-NLS-1$
+		jTabbedPane1.addTab(POSConstants.BUTTON_STYLE, tabButtonStyle); //$NON-NLS-1$
 
 		btnButtonColor.addActionListener(new ActionListener() {
 			@Override
@@ -321,7 +322,7 @@ public class MenuModifierForm extends BeanEditor {
 		//lelfInputPanel.add(btnCalculateMultilierPrice, "gapright 10,w 80!");
 
 		JScrollPane scrollPane = new JScrollPane(multiplierPanel);
-		scrollPane.setBorder(new TitledBorder("Multiplier price"));
+		scrollPane.setBorder(new TitledBorder(Messages.getString("MenuModifierForm.11")));
 		lelfInputPanel.add(scrollPane, "newline,skip 1,grow");
 
 		tabPrice.add(buttonPanel, BorderLayout.SOUTH);
@@ -474,7 +475,8 @@ public class MenuModifierForm extends BeanEditor {
 	class PriceByOrderType extends AbstractTableModel {
 		List<String> propertiesKey = new ArrayList<String>();
 
-		String[] cn = { "MODIFIER", "ORDER TYPE", "PRICE", "TAX", "EXTRA PRICE", "EXTRA TAX" }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+		//String[] cn = { "MODIFIER", "ORDER TYPE", "PRICE", "TAX", "EXTRA PRICE", "EXTRA TAX" }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+		String[] cn = { POSConstants.MODIFIER.toUpperCase(), POSConstants.ORDER_TYPE.toUpperCase(), POSConstants.PRICE.toLowerCase(), POSConstants.TAX.toUpperCase(), Messages.getString("MenuModifierForm.13").toUpperCase(), Messages.getString("MenuModifierForm.14").toUpperCase() }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
 
 		PriceByOrderType(Map<String, String> properties) {
 
@@ -679,7 +681,7 @@ public class MenuModifierForm extends BeanEditor {
 				lblName.setFont(new Font(null, Font.BOLD, tfName.getFont().getSize()));
 			}
 			add(lblName);
-			add(new JLabel(multiplier.isMain() ? "Price" : "Additional price", JLabel.TRAILING), "grow, gapright 10px");
+			add(new JLabel(multiplier.isMain() ? POSConstants.PRICE : Messages.getString("MenuModifierForm.12"), JLabel.TRAILING), "grow, gapright 10px");
 			add(tfAditionalPrice, "split 2,grow");
 			if (multiplier.isMain()) {
 				JButton btnCalculateMultilierPrice = new JButton("Calc");

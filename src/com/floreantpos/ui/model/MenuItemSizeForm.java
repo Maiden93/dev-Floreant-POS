@@ -6,6 +6,7 @@ import javax.swing.JPanel;
 
 import net.miginfocom.swing.MigLayout;
 
+import com.floreantpos.POSConstants;
 import com.floreantpos.model.MenuItemSize;
 import com.floreantpos.model.dao.MenuItemSizeDAO;
 import com.floreantpos.swing.DoubleTextField;
@@ -14,6 +15,7 @@ import com.floreantpos.swing.IntegerTextField;
 import com.floreantpos.swing.MessageDialog;
 import com.floreantpos.ui.BeanEditor;
 import com.floreantpos.util.POSUtil;
+import com.mysql.jdbc.Messages;
 
 /**
  *
@@ -42,10 +44,10 @@ public class MenuItemSizeForm extends BeanEditor {
 		JPanel contentPanel = new JPanel(new MigLayout("", "[][]", ""));
 
 		JLabel lblName = new JLabel(com.floreantpos.POSConstants.NAME + ":");
-		JLabel lblDescription = new JLabel("Description");
-		JLabel lblTranslatedName = new JLabel("Translated Name");
-		JLabel lblSortOrder = new JLabel("Sort Order");
-		JLabel lblSize = new JLabel("Size in Inch");
+		JLabel lblDescription = new JLabel(POSConstants.DESCRIPTION);
+		JLabel lblTranslatedName = new JLabel(POSConstants.TRANSLATED_NAME);
+		JLabel lblSortOrder = new JLabel(POSConstants.SORT_ORDER);
+		JLabel lblSize = new JLabel(Messages.getString("MenuItemForm.30"));
 
 		tfName = new FixedLengthTextField(60);
 		tfName.setColumns(30);
@@ -114,7 +116,7 @@ public class MenuItemSizeForm extends BeanEditor {
 		int sortOrder = tfSortOrder.getInteger();
 		double size = tfSizeInInch.getDouble();
 		if (POSUtil.isBlankOrNull(name)) {
-			MessageDialog.showError("Name is required");
+			MessageDialog.showError(Messages.getString("PosMessage.92"));
 			return false;
 		}
 		/*if (POSUtil.isBlankOrNull(description)) {
@@ -142,8 +144,8 @@ public class MenuItemSizeForm extends BeanEditor {
 	public String getDisplayText() {
 		MenuItemSize menuItemSize = (MenuItemSize) getBean();
 		if (menuItemSize.getId() == null) {
-			return "New Size";
+			return Messages.getString("MenuItemForm.44");
 		}
-		return "Edit Size";
+		return Messages.getString("MenuItemForm.45");
 	}
 }

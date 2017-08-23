@@ -42,6 +42,7 @@ public class POSConstants {
 	public static final String TEST = Messages.getString("PosMessage.322"); //$NON-NLS-1$
 	public static final String TEST2 = Messages.getString("PosMessage.323"); //$NON-NLS-1$
 	public static final String FLOREANTPOS = Messages.getString("FLOREANTPOS"); //$NON-NLS-1$
+	public static final String BUTTON_STYLE = Messages.getString("MenuItemForm.26"); //$NON-NLS-1$
 	//public static final String USER_TYPE = Messages.getString("PosMessage.316"); //$NON-NLS-1$
 
 	public static final String CashierSwitchBoardView_LABEL_ORDER = Messages.getString("CashierSwitchBoardView.LABEL_ORDER"); //$NON-NLS-1$
@@ -376,6 +377,7 @@ public class POSConstants {
 	public static final String EDIT_ACTUAL_AMOUNT = Messages.getString("PosMessage.253"); //$NON-NLS-1$
 	public static final String MENU_MODIFIER_GROUPS = Messages.getString("PosMessage.254"); //$NON-NLS-1$
 	public static final String MODIFIERS = Messages.getString("PosMessage.255"); //$NON-NLS-1$
+	public static final String MODIFIER = Messages.getString("PosMessage.329"); //$NON-NLS-1$
 	public static final String TICKET_ID = Messages.getString("PosMessage.256"); //$NON-NLS-1$
 	public static final String PRINT_TO_KITCHEN = Messages.getString("PosMessage.257"); //$NON-NLS-1$
 	public static final String PAID = Messages.getString("PosMessage.258"); //$NON-NLS-1$

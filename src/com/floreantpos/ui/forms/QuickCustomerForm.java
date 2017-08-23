@@ -41,6 +41,7 @@ import org.apache.commons.lang.StringUtils;
 import org.hibernate.StaleObjectStateException;
 
 import com.floreantpos.Messages;
+import com.floreantpos.POSConstants;
 import com.floreantpos.bo.ui.BOMessageDialog;
 import com.floreantpos.model.Customer;
 import com.floreantpos.model.dao.CustomerDAO;
@@ -118,7 +119,7 @@ public class QuickCustomerForm extends BeanEditor<Customer> {
 		tfLastName = new FixedLengthTextField();
 		//inputPanel.add(tfLastName, "cell 1 3"); //$NON-NLS-1$
 
-		JLabel lblName = new JLabel("Name"); //$NON-NLS-1$
+		JLabel lblName = new JLabel(POSConstants.NAME); //$NON-NLS-1$
 
 		inputPanel.add(lblName, "cell 0 3,alignx right"); //$NON-NLS-1$
 		tfName = new FixedLengthTextField();
@@ -304,7 +305,7 @@ public class QuickCustomerForm extends BeanEditor<Customer> {
 			if (bean2 == null)
 				return false;
 
-			int option = POSMessageDialog.showYesNoQuestionDialog(POSUtil.getBackOfficeWindow(), "Are you sure to delete selected table?", "Confirm"); //$NON-NLS-1$ //$NON-NLS-2$
+			int option = POSMessageDialog.showYesNoQuestionDialog(POSUtil.getBackOfficeWindow(), Messages.getString("CustomerForm.66"), POSConstants.CONFIRM); //$NON-NLS-1$ //$NON-NLS-2$
 			if (option != JOptionPane.YES_OPTION) {
 				return false;
 			}
