@@ -2,8 +2,8 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="hourly_labor_subreport" pageWidth="785" pageHeight="595" orientation="Landscape" columnWidth="785" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isFloatColumnFooter="true">
 	<property name="ireport.scriptlethandling" value="0"/>
 	<property name="ireport.encoding" value="UTF-8"/>
-	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="0"/>
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="1643"/>
 	<property name="ireport.y" value="0"/>
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
@@ -49,7 +49,7 @@
 				<textElement>
 					<font isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<text><![CDATA[Period]]></text>
+				<text><![CDATA[Periodo]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="staticText-2" x="75" y="0" width="71" height="17"/>
@@ -75,7 +75,7 @@
 				<textElement textAlignment="Right">
 					<font isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<text><![CDATA[Guests]]></text>
+				<text><![CDATA[Invitados]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="staticText-4" x="217" y="0" width="81" height="17"/>
@@ -88,7 +88,7 @@
 				<textElement textAlignment="Right">
 					<font isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<text><![CDATA[Sales]]></text>
+				<text><![CDATA[Ventas]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="staticText-5" x="298" y="0" width="71" height="17"/>
@@ -101,7 +101,7 @@
 				<textElement textAlignment="Right">
 					<font isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<text><![CDATA[Man Hour]]></text>
+				<text><![CDATA[Horas Hombre]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="staticText-6" x="369" y="0" width="91" height="17"/>
@@ -127,7 +127,7 @@
 				<textElement textAlignment="Right">
 					<font isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<text><![CDATA[Sales/MHour]]></text>
+				<text><![CDATA[Ventas/HH]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="staticText-8" x="549" y="0" width="71" height="17"/>
@@ -140,7 +140,7 @@
 				<textElement textAlignment="Right">
 					<font isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<text><![CDATA[Guest/MHour]]></text>
+				<text><![CDATA[Invitados/HH]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="staticText-9" x="621" y="0" width="71" height="17"/>
@@ -153,7 +153,7 @@
 				<textElement textAlignment="Right">
 					<font isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<text><![CDATA[Check/MHr]]></text>
+				<text><![CDATA[Check/HH]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="staticText-10" x="692" y="0" width="89" height="17"/>
@@ -166,7 +166,7 @@
 				<textElement textAlignment="Right">
 					<font isBold="true" pdfFontName="Helvetica-Bold"/>
 				</textElement>
-				<text><![CDATA[Labor Cost]]></text>
+				<text><![CDATA[Costo Laboral]]></text>
 			</staticText>
 			<line>
 				<reportElement key="line-1" x="2" y="17" width="780" height="1"/>
