@@ -742,6 +742,10 @@ public class Ticket extends BaseTicket {
 			setCustomerId(customer.getAutoId());
 		}
 	}
+	
+	public String getCustomerName() {
+		return getProperty("CUSTOMER_NAME");
+	}
 
 	public void removeCustomer() {
 		removeProperty(CUSTOMER_ID);

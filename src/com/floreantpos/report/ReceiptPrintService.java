@@ -403,7 +403,7 @@ public class ReceiptPrintService {
 		map.put("paidAmountText", POSConstants.RECEIPT_REPORT_PAIDAMOUNT_LABEL + " " + currencySymbol); //$NON-NLS-1$
 		map.put("dueAmountText", POSConstants.RECEIPT_REPORT_DUEAMOUNT_LABEL + " " + currencySymbol); //$NON-NLS-1$
 		map.put("changeAmountText", POSConstants.RECEIPT_REPORT_CHANGEAMOUNT_LABEL + " " + currencySymbol); //$NON-NLS-1$
-
+		
 		map.put(RECEIPT_TYPE, printProperties.getReceiptTypeName());
 		map.put(SHOW_SUBTOTAL, Boolean.valueOf(printProperties.isShowSubtotal()));
 		map.put(SHOW_HEADER_SEPARATOR, Boolean.TRUE);
@@ -574,6 +574,12 @@ public class ReceiptPrintService {
 			endRow(ticketHeaderBuilder);
 		}
 
+		if(ticket.getCustomerName()!=null) {
+			beginRow(ticketHeaderBuilder);
+			addColumn(ticketHeaderBuilder, POSConstants.RECEIPT_REPORT_CLIENT_LABEL + ticket.getCustomerName());
+			endRow(ticketHeaderBuilder);
+		}
+		
 		beginRow(ticketHeaderBuilder);
 		addColumn(ticketHeaderBuilder, POSConstants.RECEIPT_REPORT_SERVER_LABEL + ticket.getOwner());
 		endRow(ticketHeaderBuilder);

@@ -532,6 +532,7 @@ public class POSConstants {
 	public static final String NO_SALE = Messages.getString("NO_SALE"); //$NON-NLS-1$
 	//VER CLASES DEL PAQUETE com.floreantpos.table <Todas> para cambiar los botones
 	public static final String FILTERS = Messages.getString("PosMessage.331"); //$NON-NLS-1$
+	public static final String RECEIPT_REPORT_CLIENT_LABEL = Messages.getString("RECEIPT_REPORT_CLIENT_LABEL");
 	
 
 	
