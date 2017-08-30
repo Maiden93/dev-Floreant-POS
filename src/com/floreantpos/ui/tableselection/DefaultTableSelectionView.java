@@ -119,7 +119,7 @@ public class DefaultTableSelectionView extends TableSelector implements ActionLi
 		tabbedPane = new JTabbedPane();
 
 		leftPanel.add(scrollPane, java.awt.BorderLayout.CENTER);
-		tabbedPane.addTab("Restaurante", leftPanel);
+		tabbedPane.addTab(POSConstants.CONFIG_TAB_RESTAURANT, leftPanel);
 
 		add(tabbedPane, java.awt.BorderLayout.CENTER);
 
@@ -156,7 +156,7 @@ public class DefaultTableSelectionView extends TableSelector implements ActionLi
 		btnGroups.add(btnGroup);
 		btnGroups.add(btnUnGroup);
 
-		btnNewBarTab = new PosButton("New Tab");
+		btnNewBarTab = new PosButton(Messages.getString("NewBarTabAction.11"));
 		btnNewBarTab.addActionListener(new ActionListener() {
 
 			@Override
@@ -545,7 +545,7 @@ public class DefaultTableSelectionView extends TableSelector implements ActionLi
 		super.setOrderType(orderType);
 		btnNewBarTab.setVisible(orderType.isBarTab());
 		if (orderType.isBarTab())
-			tabbedPane.addTab("Bar Tab", barTab);
+			tabbedPane.addTab(Messages.getString("OrderTypeForm.14"), barTab);
 	}
 
 	@Override

@@ -322,6 +322,7 @@ public class POSConstants {
 	public static final String TABLES = Messages.getString("PosMessage.215"); //$NON-NLS-1$
 	//public static final String SWITCHBOARD = Messages.getString("PosMessage.216"); //$NON-NLS-1$
 	public static final String ORDERS = Messages.getString("POSConstants.2"); //$NON-NLS-1$
+	public static final String ORDER = Messages.getString("PosMessage.330"); //$NON-NLS-1$
 	public static final String FOOD_GROUP = Messages.getString("PosMessage.217"); //$NON-NLS-1$
 	public static final String NUMBER_OF_GUESTS = Messages.getString("PosMessage.218"); //$NON-NLS-1$
 	public static final String PERFORMING_AUTO_DRAWER_PULL = Messages.getString("PosMessage.219"); //$NON-NLS-1$

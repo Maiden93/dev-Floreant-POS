@@ -112,7 +112,7 @@ public class CookingInstructionSelectionView extends OkCancelOptionDialog {
 			public void actionPerformed(ActionEvent e) {
 				String instruction = tfCookingInstruction.getText();
 				if (instruction == null || instruction.isEmpty()) {
-					POSMessageDialog.showMessage(Application.getPosWindow(), "La instrucción no puede estar vacía.");
+					POSMessageDialog.showMessage(Application.getPosWindow(), Messages.getString("CookingInstructionSelectionView.3"));
 					return;
 				}
 				CookingInstruction cookingInstruction = new CookingInstruction();
@@ -163,7 +163,7 @@ public class CookingInstructionSelectionView extends OkCancelOptionDialog {
 		String inputInstruction = tfCookingInstruction.getText();
 		if (selectedRows.length == 1) {
 			if (inputInstruction == null || inputInstruction.isEmpty()) {
-				POSMessageDialog.showMessage(Application.getPosWindow(), "La instrucción no puede estar vacía.");
+				POSMessageDialog.showMessage(Application.getPosWindow(), Messages.getString("CookingInstructionSelectionView.3"));
 				return;
 			}
 			CookingInstruction ci = model.rowsList.get(selectedRows[0]);
@@ -180,7 +180,7 @@ public class CookingInstructionSelectionView extends OkCancelOptionDialog {
 		}
 		else if (selectedRows.length == 0) {
 			if (inputInstruction == null || inputInstruction.isEmpty()) {
-				POSMessageDialog.showMessage(Application.getPosWindow(), "La instrucción no puede estar vacía.");
+				POSMessageDialog.showMessage(Application.getPosWindow(), Messages.getString("CookingInstructionSelectionView.3"));
 				return;
 			}
 			TicketItemCookingInstruction cookingInstruction = new TicketItemCookingInstruction();

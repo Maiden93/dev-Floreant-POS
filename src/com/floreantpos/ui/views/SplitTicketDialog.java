@@ -171,7 +171,7 @@ public class SplitTicketDialog extends POSDialog {
         toolbarPanel.add(btnNumSplit4);
         
         buttonGroup.add(btnSplitBySeat);
-		btnSplitBySeat.setText("Split by seat number"); //$NON-NLS-1$
+		btnSplitBySeat.setText(Messages.getString("SplitTicketDialog.1")); //$NON-NLS-1$
 		btnSplitBySeat.setPreferredSize(new java.awt.Dimension(120, 40));
 		btnSplitBySeat.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {

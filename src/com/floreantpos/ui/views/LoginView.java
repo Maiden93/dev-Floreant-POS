@@ -119,7 +119,7 @@ public class LoginView extends ViewPanel {
 
 		btnSwitchBoard = new PosButton(POSConstants.ORDERS);
 		btnKitchenDisplay = new PosButton(POSConstants.KITCHEN_DISPLAY_BUTTON_TEXT);
-		btnDriverView = new PosButton("DRIVER VIEW");
+		btnDriverView = new PosButton(Messages.getString("LoginView.7"));
 		btnConfigureDatabase = new PosButton(POSConstants.CONFIGURE_DATABASE);
 		btnBackOffice = new PosButton(POSConstants.BACK_OFFICE_BUTTON_TEXT);
 

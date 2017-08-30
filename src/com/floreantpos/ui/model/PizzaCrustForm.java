@@ -28,12 +28,14 @@ import javax.swing.JPanel;
 
 import net.miginfocom.swing.MigLayout;
 
+import com.floreantpos.POSConstants;
 import com.floreantpos.model.PizzaCrust;
 import com.floreantpos.model.dao.PizzaCrustDAO;
 import com.floreantpos.swing.FixedLengthTextField;
 import com.floreantpos.swing.MessageDialog;
 import com.floreantpos.ui.BeanEditor;
 import com.floreantpos.util.POSUtil;
+import com.mysql.jdbc.Messages;
 
 /**
  *
@@ -61,9 +63,9 @@ public class PizzaCrustForm extends BeanEditor {
 		JPanel contentPanel = new JPanel(new MigLayout("fill"));
 
 		JLabel lblName = new JLabel(com.floreantpos.POSConstants.NAME + ":");
-		JLabel lblDescription = new JLabel("Description");
-		JLabel lblTranslatedName = new JLabel("Translated Name");
-		JLabel lblSortOrder = new JLabel("Sort Order");
+		JLabel lblDescription = new JLabel(POSConstants.DESCRIPTION);
+		JLabel lblTranslatedName = new JLabel(POSConstants.TRANSLATED_NAME);
+		JLabel lblSortOrder = new JLabel(POSConstants.SORT_ORDER);
 
 		tfName = new FixedLengthTextField();
 		tfDescription = new FixedLengthTextField();
@@ -123,7 +125,7 @@ public class PizzaCrustForm extends BeanEditor {
 		String sortOrder = tfSortOrder.getText();
 
 		if (POSUtil.isBlankOrNull(name)) {
-			MessageDialog.showError("Name is required");
+			MessageDialog.showError(Messages.getString("PosMessage.92"));
 			return false;
 		}
 
@@ -152,8 +154,8 @@ public class PizzaCrustForm extends BeanEditor {
 	public String getDisplayText() {
 		PizzaCrust pizzaCrust = (PizzaCrust) getBean();
 		if (pizzaCrust.getId() == null) {
-			return "New Pizza Crust";
+			return Messages.getString("PizzaCrustExplorerAction.1");
 		}
-		return "Edit Pizza Crust";
+		return Messages.getString("PizzaCrustExplorerAction.2");
 	}
 }

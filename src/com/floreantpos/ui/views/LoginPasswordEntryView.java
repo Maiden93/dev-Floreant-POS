@@ -47,6 +47,7 @@ import net.miginfocom.swing.MigLayout;
 import org.apache.commons.logging.LogFactory;
 
 import com.floreantpos.Messages;
+import com.floreantpos.POSConstants;
 import com.floreantpos.actions.ClockInOutAction;
 import com.floreantpos.config.TerminalConfig;
 import com.floreantpos.config.ui.DatabaseConfigurationDialog;
@@ -137,7 +138,7 @@ class LoginPasswordEntryView extends JPanel {
 				doLogin();
 			}
 		});
-		psbtnLogin.setText("Iniciar sesión"); //$NON-NLS-1$
+		psbtnLogin.setText(POSConstants.LOGIN); //$NON-NLS-1$
 		bottomPanel.add(psbtnLogin, "grow, wrap, gapbottom 20px"); //$NON-NLS-1$
 		
 		PosButton btnClockOUt = new PosButton(new ClockInOutAction(false, true));

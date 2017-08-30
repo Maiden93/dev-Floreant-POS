@@ -115,14 +115,14 @@ public class PizzaModifierPriceDialog extends POSDialog {
 		MenuItemSize selectedSize = (MenuItemSize) cbSize.getSelectedItem();
 
 		if (selectedSize == null) {
-			POSMessageDialog.showError(this, "Please Select Size");
+			POSMessageDialog.showError(this, Messages.getString("PizzaItemPriceDialog.0"));
 			return false;
 		}
 
 		if (existingPriceList != null) {
 			for (PizzaModifierPrice mp : existingPriceList) {
 				if (selectedSize.equals(mp.getSize()) && (mp != this.modifierPrice)) {
-					POSMessageDialog.showError(this, "Duplicate size!");
+					POSMessageDialog.showError(this, Messages.getString("PizzaItemPriceDialog.4"));
 					return false;
 				}
 			}
@@ -157,7 +157,7 @@ public class PizzaModifierPriceDialog extends POSDialog {
 		tfPrice = new DoubleTextField();
 
 		final JLabel lblExtraPrice = new JLabel();
-		lblExtraPrice.setText("Extra Price:");
+		lblExtraPrice.setText(Messages.getString("PosMessage.301"));
 		tfExtraPrice = new DoubleTextField();
 
 		JPanel panel = new JPanel(new MigLayout("", "[][fill, grow]", "")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$

@@ -68,6 +68,7 @@ import org.hibernate.Hibernate;
 import org.hibernate.Session;
 
 import com.floreantpos.Messages;
+import com.floreantpos.POSConstants;
 import com.floreantpos.PosLog;
 import com.floreantpos.extension.ExtensionManager;
 import com.floreantpos.extension.InventoryPlugin;
@@ -417,7 +418,7 @@ public class PizzaItemForm extends BeanEditor<MenuItem> implements ActionListene
 			}
 		});
 
-		btnAutoGenerate.setText("Auto Generate"); //$NON-NLS-1$
+		btnAutoGenerate.setText(Messages.getString("MenuItemForm.52")); //$NON-NLS-1$
 		btnAutoGenerate.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -813,9 +814,9 @@ public class PizzaItemForm extends BeanEditor<MenuItem> implements ActionListene
 	public String getDisplayText() {
 		MenuItem foodItem = (MenuItem) getBean();
 		if (foodItem.getId() == null) {
-			return "New pizza item";
+			return Messages.getString("PizzaItem.4");
 		}
-		return "Edit pizza item";
+		return Messages.getString("PizzaItem.5");
 	}
 
 	class MenuItemMGListModel extends AbstractTableModel {
@@ -971,7 +972,8 @@ public class PizzaItemForm extends BeanEditor<MenuItem> implements ActionListene
 	class PriceByOrderTypeTableModel extends AbstractTableModel {
 		List<String> propertiesKey = new ArrayList<String>();
 
-		String[] cn = { "ORDER TYPE", "PRICE", "TAX" }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+		//String[] cn = { "ORDER TYPE", "PRICE", "TAX" }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+		String[] cn = { POSConstants.ORDER_TYPE.toUpperCase(), POSConstants.PRICE.toUpperCase(), POSConstants.TAX.toUpperCase() }; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
 
 		PriceByOrderTypeTableModel(Map<String, String> properties) {
 
@@ -1071,7 +1073,7 @@ public class PizzaItemForm extends BeanEditor<MenuItem> implements ActionListene
 	private void addNewPrice() {
 		List<PizzaPrice> pizzaPriceList = priceTableModel.getRows();
 		PizzaItemPriceDialog dialog = new PizzaItemPriceDialog(this.getParentFrame(), null, pizzaPriceList);
-		dialog.setTitle("Add New Price");
+		dialog.setTitle(Messages.getString("PizzaItem.6"));
 		dialog.setSize(PosUIManager.getSize(350, 220));
 		dialog.open();
 		if (dialog.isCanceled()) {
@@ -1126,7 +1128,7 @@ public class PizzaItemForm extends BeanEditor<MenuItem> implements ActionListene
 		}
 		PizzaPrice pizzaPrice = priceTableModel.getRow(selectedRow);
 		PizzaItemPriceDialog pizzaItemPriceDialog = new PizzaItemPriceDialog(this.getParentFrame(), pizzaPrice, pizzaPriceList);
-		pizzaItemPriceDialog.setTitle("Edit Pizza Price");
+		pizzaItemPriceDialog.setTitle(Messages.getString("PizzaItem.7"));
 		pizzaItemPriceDialog.setSize(PosUIManager.getSize(350, 220));
 		pizzaItemPriceDialog.open();
 

@@ -65,7 +65,7 @@ public class OrderInfoDialog extends POSDialog {
 		JPanel panel = new JPanel();
 		getContentPane().add(panel, BorderLayout.SOUTH);
 
-		btnReOrder = new PosButton("Reorder");
+		btnReOrder = new PosButton(Messages.getString("OrderInfoDialog.9"));
 
 		btnReOrder.addActionListener(new ActionListener() {
 
@@ -131,7 +131,7 @@ public class OrderInfoDialog extends POSDialog {
 				doPrintDriverCopy();
 			}
 		});
-		btnPrintDriverCopy.setText("Print (Driver Copy)"); //$NON-NLS-1$
+		btnPrintDriverCopy.setText(Messages.getString("OrderInfoDialog.10")); //$NON-NLS-1$
 		btnPrintDriverCopy.setVisible(false);
 		panel.add(btnPrintDriverCopy);
 
@@ -157,7 +157,7 @@ public class OrderInfoDialog extends POSDialog {
 		btnTransferUser.setVisible(false);
 		btnReOrder.setVisible(false);
 		btnPrintDriverCopy.setVisible(true);
-		btnPrint.setText("Print (Customer Copy)");
+		btnPrint.setText(Messages.getString("OrderInfoDialog.11"));
 	}
 
 	protected void doPrint() {

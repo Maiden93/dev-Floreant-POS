@@ -337,6 +337,7 @@ public class POSConstants {
 	public static final String TABLES = Messages.getString("PosMessage.215"); //$NON-NLS-1$
 	//public static final String SWITCHBOARD = Messages.getString("PosMessage.216"); //$NON-NLS-1$
 	public static final String ORDERS = Messages.getString("POSConstants.2"); //$NON-NLS-1$
+	public static final String ORDER = Messages.getString("POSConstants.330");
 	public static final String FOOD_GROUP = Messages.getString("PosMessage.217"); //$NON-NLS-1$
 	public static final String NUMBER_OF_GUESTS = Messages.getString("PosMessage.218"); //$NON-NLS-1$
 	public static final String PERFORMING_AUTO_DRAWER_PULL = Messages.getString("PosMessage.219"); //$NON-NLS-1$
@@ -530,6 +531,8 @@ public class POSConstants {
 	public static final String SERVER_KITCHEN = Messages.getString("SERVER_KITCHEN"); //$NON-NLS-1$
 	public static final String NO_SALE = Messages.getString("NO_SALE"); //$NON-NLS-1$
 	//VER CLASES DEL PAQUETE com.floreantpos.table <Todas> para cambiar los botones
+	public static final String FILTERS = Messages.getString("PosMessage.331"); //$NON-NLS-1$
+	
 
 	
 }

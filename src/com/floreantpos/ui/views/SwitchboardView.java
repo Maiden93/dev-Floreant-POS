@@ -221,7 +221,7 @@ public class SwitchboardView extends ViewPanel implements ActionListener, ITicke
 	}
 
 	private Component createBarTabButton(List<OrderType> orderTypes) {
-		PosButton btnNewBarTab = new PosButton("NUEVA CUENTA DE BARRA");
+		PosButton btnNewBarTab = new PosButton(Messages.getString("NewBarTabAction.12").toUpperCase());
 		List<OrderType> barTabOrders = new ArrayList<>();
 		for (OrderType orderType : orderTypes) {
 			if (orderType.isBarTab())
@@ -242,7 +242,7 @@ public class SwitchboardView extends ViewPanel implements ActionListener, ITicke
 				OrderType orderType = null;
 				if (barTabOrders.size() > 1) {
 					OrderTypeSelectionDialog dialog = new OrderTypeSelectionDialog();
-					dialog.setTitle("SELECCIONE EL TIPO DE ORDEN");
+					dialog.setTitle(Messages.getString("SwitchboardView.23"));
 					dialog.setSize(400, 200);
 					dialog.open();
 					if (dialog.isCanceled())
@@ -253,7 +253,7 @@ public class SwitchboardView extends ViewPanel implements ActionListener, ITicke
 					orderType = barTabOrders.get(0);
 				}
 				if (!orderType.isBarTab()) {
-					POSMessageDialog.showMessage("El tipo de orden seleccionado no es de la barra");
+					POSMessageDialog.showMessage(Messages.getString("SwitchboardView.24"));
 					return;
 				}
 				new NewBarTabAction(orderType, null, Application.getPosWindow()).actionPerformed(e);
@@ -777,7 +777,7 @@ public class SwitchboardView extends ViewPanel implements ActionListener, ITicke
 	public void ticketListUpdated() {
 		PaymentStatusFilter paymentStatusFilter = TerminalConfig.getPaymentStatusFilter();
 		String orderTypeFilter = TerminalConfig.getOrderTypeFilter();
-		String title = POSConstants.OPEN_TICKETS_AND_ACTIVITY + " [ FILTROS: " + paymentStatusFilter + ", " + orderTypeFilter + " ]"; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		String title = POSConstants.OPEN_TICKETS_AND_ACTIVITY + " [ "+POSConstants.FILTERS+": " + paymentStatusFilter + ", " + orderTypeFilter + " ]"; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 
 		ticketsListPanelBorder.setTitle(title);
 

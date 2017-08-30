@@ -164,11 +164,11 @@ public class PizzaModifierForm extends BeanEditor {
 		chkPrintToKitchen.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
 		chkPrintToKitchen.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-		chkSectionWisePrice.setText("Sectionwise price");
+		chkSectionWisePrice.setText(Messages.getString("MenuModifierForm.19"));
 		chkSectionWisePrice.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
 		chkSectionWisePrice.setMargin(new java.awt.Insets(0, 0, 0, 0));
 
-		chkUseFixedPrice = new JCheckBox("Use fixed price");
+		chkUseFixedPrice = new JCheckBox(Messages.getString("MenuModifierForm.10"));
 
 		JPanel generalTabPanel = new JPanel(new BorderLayout());
 		jTabbedPane1.addTab(com.floreantpos.POSConstants.GENERAL, generalTabPanel);

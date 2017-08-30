@@ -52,7 +52,7 @@ import com.floreantpos.ui.views.order.RootView;
 import com.floreantpos.ui.views.order.ViewPanel;
 
 public class SwitchboardOtherFunctionsView extends ViewPanel {
-	public static final String VIEW_NAME = "ALL FUNCTIONS"; //$NON-NLS-1$
+	public static final String VIEW_NAME = Messages.getString("SwitchboardOtherFunctionsView.0="); //$NON-NLS-1$
 	private static SwitchboardOtherFunctionsView instance;
 
 	private JPanel contentPanel;
